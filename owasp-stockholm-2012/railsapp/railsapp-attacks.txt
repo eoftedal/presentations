@@ -1,0 +1,20 @@
+Usernames/password: (very secure indeed)
+admin/admin
+Erlend/erlend
+
+
+Approve/disapprove talk
+    breakpoint in views/talks/edit_view.js: 27
+
+
+Change date
+    breakpoint in views/talks/edit_view.js: 27
+
+
+Become admin
+    breakpoint in views/admin/users/edit_view.js: 27
+    role: admin
+
+
+CS#RF
+    http://localhost:3000/#/talks/funnybone.vbs/approve

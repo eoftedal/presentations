@@ -1,0 +1,135 @@
+<!Doctype HTML>
+<html>
+<head>
+<style>
+.x {
+	position: relative;
+	xfloat: left;
+	height: 200px;
+	border: 1px solid #444;
+}
+
+.x div {
+	-webkit-transition: all 800ms ease-in-out 100ms,
+		color 1000ms ease-in-out 800ms;
+	transition: all 800ms ease-in-out 100ms,
+		color 1000ms ease-in-out 800ms;
+}
+
+.x #key {
+	height: 100%;
+	width: 20px;
+	float: left;
+	background: #f0f;
+}
+
+.x > div {
+	position: absolute;
+	width: 90px;
+	height: 10px;
+	top: 50px;
+}
+.x #S {
+	top: 100px;
+	background: #0f0;
+	left: 100px;
+	z-index: 100;
+}
+.x #block0 {
+	background: #00f;
+	left: 200px;
+}
+.x #block1 {
+	background: #00f;
+	left: 300px;
+}
+.x #block2 {
+	background: #fff;
+	left: 400px;
+}
+
+.x.step0 #block0, .x.step0 #block1, .x.step0 #block2 {
+	top: 30px;
+}
+
+
+.x.step0 #block0 {
+	left: 210px;
+}
+.x.step0 #block2 {
+	left: 390px;
+}
+
+
+.x.step0 #S, .x.step1 #S, .x.step2 #S{
+	background: #ff0;
+}
+.x.step0 #pad, .x.step1 #pad {
+	x-webkit-transform: scale(0,1);
+	xtransform: scale(0,1);
+	margin-right: 75px;
+	width: 0px;
+}
+
+.x.step3 #S, .x.step3 #block0 {
+	top: 100px;
+	left: 200px;
+}
+.x.step4 #S, .x.step4 #block1 {
+	top: 100px;
+	left: 300px;
+}
+.x.step4 #block0 {
+	opacity: 0;
+}
+.x.step5 #S, .x.step5 #block2 {
+	top: 100px;
+	left: 400px;
+}
+.x.step5 #block0, .x.step5 #block1 {
+	opacity: 0;
+}
+#pad {
+	height: 100%;
+	background: #0ff;
+	width: 75px;
+	float: right;
+}
+#part {
+	height: 100%;
+	background: #00f;
+	width: 15px;
+	float: left;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script>
+var step = 0;
+$(function() {
+	$(".x").click(function(evt) {
+		evt.stopPropagation();
+		evt.preventDefault();
+		$(".x").removeClass("step" + step);
+		step = (step + 1) % 6;
+		$(".x").addClass("step" + step);
+	});
+});
+</script>
+</head>
+<body>
+
+<div class="x step0">
+	<div id="S">
+	</div>
+	<div id="block0">
+		<div id="key"></div>
+	</div>
+	<div id="block1">
+	</div>
+	<div id="block2">
+		<div id="part"></div>
+		<div id="pad"></div>
+	</div>
+</div>
+</body>
+</html>

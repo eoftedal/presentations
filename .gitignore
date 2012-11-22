@@ -1,0 +1,9 @@
+tmp/
+.sass-cache/
+target/
+bin/
+.metadata/
+.project
+.settings
+.project/
+.settings/
