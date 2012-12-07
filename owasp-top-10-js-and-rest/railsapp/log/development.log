@@ -12943,3 +12943,2101 @@ Processing by TalksController#index as JSON
   [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
 Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-04 09:05:55 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 158ms (Views: 157.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-04 09:05:55 +0100
+Served asset /application.css - 200 OK (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:55 +0100
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:55 +0100
+Served asset /jquery.js - 200 OK (7ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:55 +0100
+Served asset /underscore.js - 200 OK (5ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:55 +0100
+Served asset /backbone.js - 200 OK (4ms)
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:55 +0100
+Served asset /backbone_rails_sync.js - 200 OK (3ms)
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:55 +0100
+Served asset /backbone_datalink.js - 200 OK (5ms)
+
+
+Started GET "/assets/backbone/conference.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:55 +0100
+Served asset /backbone/conference.js - 200 OK (46ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/edit.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:55 +0100
+Served asset /backbone/templates/admin/users/edit.js - 200 OK (3ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/index.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:55 +0100
+Served asset /backbone/templates/admin/users/index.js - 200 OK (2ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/show.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:55 +0100
+Served asset /backbone/templates/admin/users/show.js - 200 OK (2ms)
+
+
+Started GET "/assets/backbone/templates/home.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:55 +0100
+Served asset /backbone/templates/home.js - 200 OK (2ms)
+
+
+Started GET "/assets/backbone/templates/login.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:55 +0100
+Served asset /backbone/templates/login.js - 200 OK (2ms)
+
+
+Started GET "/assets/backbone/templates/menu.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/templates/menu.js - 200 OK (1ms)
+
+
+Started GET "/assets/backbone/templates/profile.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/templates/profile.js - 200 OK (1ms)
+
+
+Started GET "/assets/backbone/templates/talks/edit.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/templates/talks/edit.js - 200 OK (2ms)
+
+
+Started GET "/assets/backbone/templates/talks/new.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/templates/talks/new.js - 200 OK (2ms)
+
+
+Started GET "/assets/backbone/templates/talks/index.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/templates/talks/index.js - 200 OK (2ms)
+
+
+Started GET "/assets/backbone/templates/talks/notfound.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/templates/talks/notfound.js - 200 OK (3ms)
+
+
+Started GET "/assets/backbone/templates/talks/show.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/templates/talks/show.js - 200 OK (6ms)
+
+
+Started GET "/assets/backbone/models/authentication.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/models/authentication.js - 200 OK (2ms)
+
+
+Started GET "/assets/backbone/models/talk.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/models/talk.js - 200 OK (1ms)
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/models/user.js - 200 OK (28ms)
+
+
+Started GET "/assets/backbone/models/userinfo.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/models/userinfo.js - 200 OK (7ms)
+
+
+Started GET "/assets/backbone/views/admin/users/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/views/admin/users/index_view.js - 200 OK (2ms)
+
+
+Started GET "/assets/backbone/views/admin/users/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/views/admin/users/edit_view.js - 200 OK (2ms)
+
+
+Started GET "/assets/backbone/views/admin/users/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/views/admin/users/show_view.js - 200 OK (1ms)
+
+
+Started GET "/assets/backbone/views/home_view.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/views/home_view.js - 200 OK (1ms)
+
+
+Started GET "/assets/backbone/views/login_view.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/views/login_view.js - 200 OK (2ms)
+
+
+Started GET "/assets/backbone/views/menu_view.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/views/menu_view.js - 200 OK (2ms)
+
+
+Started GET "/assets/backbone/views/profile_view.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/views/profile_view.js - 200 OK (3ms)
+
+
+Started GET "/assets/backbone/views/talks/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/views/talks/index_view.js - 200 OK (4ms)
+
+
+Started GET "/assets/backbone/views/talks/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/views/talks/edit_view.js - 200 OK (7ms)
+
+
+Started GET "/assets/backbone/views/talks/new_view.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/views/talks/new_view.js - 200 OK (2ms)
+
+
+Started GET "/assets/backbone/views/talks/notfound_view.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/views/talks/notfound_view.js - 200 OK (1ms)
+
+
+Started GET "/assets/backbone/views/talks/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/views/talks/show_view.js - 200 OK (2ms)
+
+
+Started GET "/assets/backbone/routers/menu_router.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/routers/menu_router.js - 200 OK (4ms)
+
+
+Started GET "/assets/backbone/routers/talks_router.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/routers/talks_router.js - 200 OK (3ms)
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /backbone/routers/users_router.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Served asset /application.js - 200 OK (57ms)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2012-12-04 09:05:56 +0100
+Processing by ProfilesController#show as JSON
+  [1m[36mUser Load (3.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 66ms (Views: 0.4ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 09:05:58 +0100
+Processing by TalksController#index as JSON
+  [1m[35mTalk Load (0.2ms)[0m  SELECT "talks".* FROM "talks" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 74ms (Views: 41.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 09:06:04 +0100
+Processing by TalksController#index as JSON
+  [1m[36mTalk Load (0.3ms)[0m  [1mSELECT "talks".* FROM "talks" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/talks/7" for 127.0.0.1 at 2012-12-04 09:06:05 +0100
+Processing by TalksController#update as JSON
+  Parameters: {"talk"=>{"title"=>"Funnybone.vbs", "description"=>"A port of backbone.js to VBScript.", "approved"=>false}, "id"=>"7"}
+  [1m[35mTalk Load (0.2ms)[0m  SELECT "talks".* FROM "talks" WHERE "talks"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  UPDATE "talks" SET "approved" = 'f', "updated_at" = '2012-12-04 08:06:05.733714' WHERE "talks"."id" = 7
+  [1m[36m (32.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Completed 200 OK in 41ms (Views: 1.7ms | ActiveRecord: 33.7ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 09:06:06 +0100
+Processing by TalksController#index as JSON
+  [1m[36mTalk Load (0.2ms)[0m  [1mSELECT "talks".* FROM "talks" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-04 12:15:20 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 109ms (Views: 108.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /jquery.js - 304 Not Modified (40ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /underscore.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone_datalink.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone_rails_sync.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone/conference.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/conference.js - 304 Not Modified (48ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/edit.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/templates/admin/users/edit.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/index.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/templates/admin/users/index.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/show.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/templates/admin/users/show.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/backbone/templates/home.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/templates/home.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/templates/login.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/templates/login.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone/templates/menu.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/templates/menu.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/backbone/templates/profile.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/templates/profile.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/backbone/templates/talks/edit.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/templates/talks/edit.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone/templates/talks/index.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/templates/talks/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/templates/talks/new.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/templates/talks/new.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone/templates/talks/notfound.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/templates/talks/notfound.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/templates/talks/show.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/templates/talks/show.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone/models/authentication.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/models/authentication.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/backbone/models/talk.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/models/talk.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/models/user.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/backbone/models/userinfo.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/models/userinfo.js - 304 Not Modified (28ms)
+
+
+Started GET "/assets/backbone/views/admin/users/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/views/admin/users/edit_view.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/views/admin/users/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/views/admin/users/index_view.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone/views/admin/users/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/views/admin/users/show_view.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/views/home_view.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/views/home_view.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/views/login_view.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/views/login_view.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone/views/menu_view.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/views/menu_view.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone/views/profile_view.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/views/profile_view.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/views/talks/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/views/talks/edit_view.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/views/talks/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/views/talks/index_view.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone/views/talks/new_view.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/views/talks/new_view.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/views/talks/notfound_view.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/views/talks/notfound_view.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/backbone/views/talks/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/views/talks/show_view.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/backbone/routers/menu_router.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/routers/menu_router.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/routers/users_router.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/routers/talks_router.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /backbone/routers/talks_router.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-04 12:15:21 +0100
+Served asset /application.js - 304 Not Modified (73ms)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2012-12-04 12:15:22 +0100
+Processing by ProfilesController#show as JSON
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 64ms (Views: 0.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 12:19:18 +0100
+Processing by TalksController#index as JSON
+  [1m[35mTalk Load (0.2ms)[0m  SELECT "talks".* FROM "talks" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 72ms (Views: 60.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 12:19:23 +0100
+Processing by TalksController#index as JSON
+  [1m[36mTalk Load (0.3ms)[0m  [1mSELECT "talks".* FROM "talks" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-12-04 12:19:36 +0100
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 12:19:37 +0100
+Processing by TalksController#index as JSON
+  [1m[36mTalk Load (0.3ms)[0m  [1mSELECT "talks".* FROM "talks" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-12-04 12:19:39 +0100
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 12:19:40 +0100
+Processing by TalksController#index as JSON
+  [1m[36mTalk Load (0.2ms)[0m  [1mSELECT "talks".* FROM "talks" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 12:20:03 +0100
+Processing by TalksController#index as JSON
+  [1m[35mTalk Load (0.3ms)[0m  SELECT "talks".* FROM "talks" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/" for 127.0.0.1 at 2012-12-04 15:17:58 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-04 15:17:58 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:58 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:58 +0100
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:58 +0100
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:58 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:58 +0100
+Served asset /backbone_rails_sync.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:58 +0100
+Served asset /backbone_datalink.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/conference.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:58 +0100
+Served asset /backbone/conference.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/edit.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:58 +0100
+Served asset /backbone/templates/admin/users/edit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/index.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:58 +0100
+Served asset /backbone/templates/admin/users/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/show.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/templates/admin/users/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/home.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/templates/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/login.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/templates/login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/menu.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/templates/menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/profile.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/templates/profile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/edit.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/templates/talks/edit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/index.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/templates/talks/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/new.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/templates/talks/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/notfound.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/templates/talks/notfound.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/show.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/templates/talks/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/authentication.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/models/authentication.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/models/talk.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/models/talk.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/models/user.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/models/userinfo.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/models/userinfo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/views/admin/users/edit_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/views/admin/users/index_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/views/admin/users/show_view.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/views/home_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/views/home_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/login_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/views/login_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/menu_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/views/menu_view.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone/views/profile_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/views/profile_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/views/talks/edit_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/views/talks/index_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/new_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/views/talks/new_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/notfound_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/views/talks/notfound_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/views/talks/show_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/talks_router.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/routers/talks_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/menu_router.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/routers/menu_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /backbone/routers/users_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Served asset /application.js - 304 Not Modified (51ms)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2012-12-04 15:17:59 +0100
+Processing by ProfilesController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 15:21:48 +0100
+Processing by TalksController#index as JSON
+  [1m[35mTalk Load (0.3ms)[0m  SELECT "talks".* FROM "talks" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 15:21:50 +0100
+Processing by TalksController#index as JSON
+  [1m[36mTalk Load (0.3ms)[0m  [1mSELECT "talks".* FROM "talks" [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 15:21:52 +0100
+Processing by TalksController#index as JSON
+  [1m[35mTalk Load (0.2ms)[0m  SELECT "talks".* FROM "talks" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone_rails_sync.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone_datalink.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/conference.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/conference.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/edit.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/templates/admin/users/edit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/index.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/templates/admin/users/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/show.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/templates/admin/users/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/home.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/templates/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/login.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/templates/login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/menu.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/templates/menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/profile.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/templates/profile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/edit.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/templates/talks/edit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/index.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/templates/talks/index.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone/templates/talks/new.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/templates/talks/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/notfound.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/templates/talks/notfound.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/show.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/templates/talks/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/authentication.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/models/authentication.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone/models/talk.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/models/talk.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/models/user.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/backbone/models/userinfo.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/models/userinfo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/views/admin/users/edit_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/views/admin/users/index_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/views/admin/users/show_view.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/backbone/views/home_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/views/home_view.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/views/login_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/views/login_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/menu_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/views/menu_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/views/talks/edit_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/profile_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/views/profile_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/views/talks/index_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/new_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/views/talks/new_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/notfound_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/views/talks/notfound_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/views/talks/show_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/menu_router.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/routers/menu_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/talks_router.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/routers/talks_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /backbone/routers/users_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2012-12-04 15:22:14 +0100
+Processing by ProfilesController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-04 15:22:19 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 60ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-04 15:22:19 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:19 +0100
+Served asset /jquery.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:19 +0100
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:19 +0100
+Served asset /backbone.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:19 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone_rails_sync.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone_datalink.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/conference.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/conference.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/edit.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/templates/admin/users/edit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/index.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/templates/admin/users/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/show.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/templates/admin/users/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/home.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/templates/home.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/templates/login.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/templates/login.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/templates/menu.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/templates/menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/profile.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/templates/profile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/edit.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/templates/talks/edit.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/backbone/templates/talks/index.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/templates/talks/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/new.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/templates/talks/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/notfound.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/templates/talks/notfound.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/show.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/templates/talks/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/talk.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/models/talk.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/authentication.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/models/authentication.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/models/user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/userinfo.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/models/userinfo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/views/admin/users/index_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/views/admin/users/edit_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/views/admin/users/show_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/home_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/views/home_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/login_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/views/login_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/menu_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/views/menu_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/profile_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/views/profile_view.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/views/talks/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/views/talks/edit_view.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/backbone/views/talks/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/views/talks/index_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/new_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/views/talks/new_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/notfound_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/views/talks/notfound_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/views/talks/show_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/menu_router.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/routers/menu_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/talks_router.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/routers/talks_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /backbone/routers/users_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Served asset /application.js - 304 Not Modified (48ms)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2012-12-04 15:22:20 +0100
+Processing by ProfilesController#show as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 15:22:28 +0100
+Processing by TalksController#index as JSON
+  [1m[36mTalk Load (0.3ms)[0m  [1mSELECT "talks".* FROM "talks" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 15:23:05 +0100
+Processing by TalksController#index as JSON
+  [1m[35mTalk Load (0.4ms)[0m  SELECT "talks".* FROM "talks" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-12-04 15:23:09 +0100
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2012-12-04 15:23:10 +0100
+Processing by SessionsController#destroy as */*
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/" for 127.0.0.1 at 2012-12-04 15:23:10 +0100
+Processing by HomeController#index as */*
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 38ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-12-04 15:23:10 +0100
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2012-12-04 15:23:16 +0100
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"Erlend", "password"=>"[FILTERED]", "authenticated"=>false, "session"=>{"username"=>"Erlend", "password"=>"[FILTERED]", "authenticated"=>false, "action"=>"create", "controller"=>"sessions"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."first_name" = 'Erlend' LIMIT 1[0m
+Redirected to http://localhost:3000/profiles
+Completed 302 Found in 40ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2012-12-04 15:23:16 +0100
+Processing by ProfilesController#show as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-12-04 15:23:16 +0100
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 15:23:21 +0100
+Processing by TalksController#index as JSON
+  [1m[35mTalk Load (0.3ms)[0m  SELECT "talks".* FROM "talks" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 15:23:26 +0100
+Processing by TalksController#index as JSON
+  [1m[36mTalk Load (0.2ms)[0m  [1mSELECT "talks".* FROM "talks" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-04 16:20:48 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-04 16:20:48 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:48 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:48 +0100
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:48 +0100
+Served asset /backbone.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:48 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:48 +0100
+Served asset /backbone_rails_sync.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/conference.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:48 +0100
+Served asset /backbone/conference.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/edit.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:48 +0100
+Served asset /backbone/templates/admin/users/edit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:48 +0100
+Served asset /backbone_datalink.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/index.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:48 +0100
+Served asset /backbone/templates/admin/users/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/show.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/templates/admin/users/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/home.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/templates/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/login.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/templates/login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/menu.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/templates/menu.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/templates/profile.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/templates/profile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/edit.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/templates/talks/edit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/index.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/templates/talks/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/templates/talks/new.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/templates/talks/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/show.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/templates/talks/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/notfound.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/templates/talks/notfound.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/authentication.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/models/authentication.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/talk.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/models/talk.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/models/user.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/backbone/models/userinfo.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/models/userinfo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/views/admin/users/edit_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/views/admin/users/index_view.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/views/admin/users/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/views/admin/users/show_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/home_view.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/views/home_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/login_view.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/views/login_view.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/views/menu_view.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/views/menu_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/profile_view.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/views/profile_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/views/talks/edit_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/views/talks/index_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/new_view.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/views/talks/new_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/notfound_view.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/views/talks/notfound_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/views/talks/show_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/menu_router.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/routers/menu_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/talks_router.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/routers/talks_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /backbone/routers/users_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Processing by ProfilesController#show as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 16:20:49 +0100
+Processing by TalksController#index as JSON
+  [1m[36mTalk Load (0.3ms)[0m  [1mSELECT "talks".* FROM "talks" [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 17:18:38 +0100
+Processing by TalksController#index as JSON
+  [1m[35mTalk Load (0.3ms)[0m  SELECT "talks".* FROM "talks" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 17:18:41 +0100
+Processing by TalksController#index as JSON
+  [1m[36mTalk Load (0.2ms)[0m  [1mSELECT "talks".* FROM "talks" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 17:18:44 +0100
+Processing by TalksController#index as JSON
+  [1m[35mTalk Load (0.2ms)[0m  SELECT "talks".* FROM "talks" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 29ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone_rails_sync.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone_datalink.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/conference.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/conference.js - 304 Not Modified (34ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/edit.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/templates/admin/users/edit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/index.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/templates/admin/users/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/home.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/templates/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/show.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/templates/admin/users/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/login.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/templates/login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/menu.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/templates/menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/profile.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/templates/profile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/edit.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/templates/talks/edit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/index.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/templates/talks/index.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/backbone/templates/talks/new.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/templates/talks/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/notfound.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/templates/talks/notfound.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/show.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/templates/talks/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/authentication.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/models/authentication.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/talk.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/models/talk.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/models/user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/userinfo.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/models/userinfo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/views/admin/users/edit_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/views/admin/users/index_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/views/admin/users/show_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/home_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/views/home_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/login_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/views/login_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/menu_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/views/menu_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/profile_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/views/profile_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/views/talks/edit_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/views/talks/index_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/new_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/views/talks/new_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/notfound_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/views/talks/notfound_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/views/talks/show_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/talks_router.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/routers/talks_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/menu_router.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/routers/menu_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /backbone/routers/users_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Processing by ProfilesController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 17:19:02 +0100
+Processing by TalksController#index as JSON
+  [1m[35mTalk Load (0.5ms)[0m  SELECT "talks".* FROM "talks" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 17:19:17 +0100
+Processing by TalksController#index as JSON
+  [1m[36mTalk Load (0.2ms)[0m  [1mSELECT "talks".* FROM "talks" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2012-12-04 17:19:33 +0100
+Processing by SessionsController#destroy as */*
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/" for 127.0.0.1 at 2012-12-04 17:19:33 +0100
+Processing by HomeController#index as */*
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 47ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 17:19:33 +0100
+Processing by TalksController#index as JSON
+  [1m[35mTalk Load (0.2ms)[0m  SELECT "talks".* FROM "talks" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2012-12-04 17:19:38 +0100
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"admin", "password"=>"[FILTERED]", "authenticated"=>false, "session"=>{"username"=>"admin", "password"=>"[FILTERED]", "authenticated"=>false, "action"=>"create", "controller"=>"sessions"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."first_name" = 'admin' LIMIT 1[0m
+Redirected to http://localhost:3000/profiles
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2012-12-04 17:19:39 +0100
+Processing by ProfilesController#show as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 17:19:39 +0100
+Processing by TalksController#index as JSON
+  [1m[36mTalk Load (0.3ms)[0m  [1mSELECT "talks".* FROM "talks" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2012-12-04 17:19:48 +0100
+Processing by SessionsController#destroy as */*
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/" for 127.0.0.1 at 2012-12-04 17:19:48 +0100
+Processing by HomeController#index as */*
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2012-12-04 17:19:56 +0100
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"Erlend", "password"=>"[FILTERED]", "authenticated"=>false, "session"=>{"username"=>"Erlend", "password"=>"[FILTERED]", "authenticated"=>false, "action"=>"create", "controller"=>"sessions"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."first_name" = 'Erlend' LIMIT 1
+Redirected to http://localhost:3000/profiles
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2012-12-04 17:19:56 +0100
+Processing by ProfilesController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/talks/7" for 127.0.0.1 at 2012-12-04 17:21:14 +0100
+Processing by TalksController#update as JSON
+  Parameters: {"talk"=>{"title"=>"Funnybone.vbs", "description"=>"A port of backbone.js to VBScript.", "approved"=>true}, "id"=>"7"}
+  [1m[35mTalk Load (0.4ms)[0m  SELECT "talks".* FROM "talks" WHERE "talks"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  UPDATE "talks" SET "approved" = 't', "updated_at" = '2012-12-04 16:21:14.104078' WHERE "talks"."id" = 7
+  [1m[36m (26.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Completed 200 OK in 35ms (Views: 1.5ms | ActiveRecord: 27.6ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 17:21:17 +0100
+Processing by TalksController#index as JSON
+  [1m[36mTalk Load (0.2ms)[0m  [1mSELECT "talks".* FROM "talks" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2012-12-04 17:21:24 +0100
+Processing by SessionsController#destroy as */*
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/" for 127.0.0.1 at 2012-12-04 17:21:24 +0100
+Processing by HomeController#index as */*
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 24ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 17:21:24 +0100
+Processing by TalksController#index as JSON
+  [1m[35mTalk Load (0.3ms)[0m  SELECT "talks".* FROM "talks" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2012-12-04 17:21:29 +0100
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"admin", "password"=>"[FILTERED]", "authenticated"=>false, "session"=>{"username"=>"admin", "password"=>"[FILTERED]", "authenticated"=>false, "action"=>"create", "controller"=>"sessions"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."first_name" = 'admin' LIMIT 1[0m
+Redirected to http://localhost:3000/profiles
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2012-12-04 17:21:29 +0100
+Processing by ProfilesController#show as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 17:21:29 +0100
+Processing by TalksController#index as JSON
+  [1m[36mTalk Load (0.3ms)[0m  [1mSELECT "talks".* FROM "talks" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/talks/7" for 127.0.0.1 at 2012-12-04 17:21:32 +0100
+Processing by TalksController#update as JSON
+  Parameters: {"talk"=>{"title"=>"Funnybone.vbs", "description"=>"A port of backbone.js to VBScript.", "approved"=>false}, "id"=>"7"}
+  [1m[35mTalk Load (0.1ms)[0m  SELECT "talks".* FROM "talks" WHERE "talks"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  UPDATE "talks" SET "approved" = 'f', "updated_at" = '2012-12-04 16:21:32.046807' WHERE "talks"."id" = 7
+  [1m[36m (78.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Completed 200 OK in 84ms (Views: 2.0ms | ActiveRecord: 79.3ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 17:21:34 +0100
+Processing by TalksController#index as JSON
+  [1m[36mTalk Load (0.3ms)[0m  [1mSELECT "talks".* FROM "talks" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 46ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone_rails_sync.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone_datalink.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/conference.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/conference.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/edit.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/templates/admin/users/edit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/index.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/templates/admin/users/index.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/show.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/templates/admin/users/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/home.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/templates/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/login.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/templates/login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/menu.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/templates/menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/edit.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/templates/talks/edit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/profile.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/templates/profile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/index.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/templates/talks/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/new.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/templates/talks/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/notfound.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/templates/talks/notfound.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/templates/talks/show.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/templates/talks/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/authentication.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/models/authentication.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/talk.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/models/talk.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/models/user.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone/models/userinfo.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/models/userinfo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/views/admin/users/edit_view.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/views/admin/users/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/views/admin/users/index_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/views/admin/users/show_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/home_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/views/home_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/login_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/views/login_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/menu_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/views/menu_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/profile_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/views/profile_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/views/talks/edit_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/views/talks/index_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/new_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/views/talks/new_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/notfound_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/views/talks/notfound_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/views/talks/show_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/menu_router.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/routers/menu_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/talks_router.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/routers/talks_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /backbone/routers/users_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:41 +0100
+Served asset /application.js - 304 Not Modified (34ms)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2012-12-04 17:34:42 +0100
+Processing by ProfilesController#show as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 17:34:42 +0100
+Processing by TalksController#index as JSON
+  [1m[36mTalk Load (0.3ms)[0m  [1mSELECT "talks".* FROM "talks" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/talks/7" for 127.0.0.1 at 2012-12-04 17:34:42 +0100
+Processing by TalksController#update as JSON
+  Parameters: {"talk"=>{"title"=>"Funnybone.vbs", "description"=>"A port of backbone.js to VBScript.", "approved"=>true}, "id"=>"7"}
+  [1m[35mTalk Load (0.1ms)[0m  SELECT "talks".* FROM "talks" WHERE "talks"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "talks" SET "approved" = 't', "updated_at" = '2012-12-04 16:34:42.130037' WHERE "talks"."id" = 7
+  [1m[36m (24.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Completed 200 OK in 31ms (Views: 3.1ms | ActiveRecord: 25.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-04 17:34:52 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-04 17:34:52 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:52 +0100
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone_datalink.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone_rails_sync.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/conference.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/conference.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/edit.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/templates/admin/users/edit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/index.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/templates/admin/users/index.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/backbone/templates/admin/users/show.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/templates/admin/users/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/home.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/templates/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/login.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/templates/login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/menu.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/templates/menu.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/profile.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/templates/profile.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/backbone/templates/talks/edit.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/templates/talks/edit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/index.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/templates/talks/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/new.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/templates/talks/new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/notfound.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/templates/talks/notfound.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/templates/talks/show.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/templates/talks/show.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/authentication.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/models/authentication.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/talk.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/models/talk.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/models/user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/models/userinfo.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/models/userinfo.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/views/admin/users/edit_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/admin/users/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/views/admin/users/index_view.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/views/admin/users/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/views/admin/users/show_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/home_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/views/home_view.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone/views/login_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/views/login_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/menu_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/views/menu_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/profile_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/views/profile_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/edit_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/views/talks/edit_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/index_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/views/talks/index_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/views/talks/new_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/views/talks/new_view.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/views/talks/notfound_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/views/talks/notfound_view.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/views/talks/show_view.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/views/talks/show_view.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/menu_router.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/routers/menu_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/talks_router.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/routers/talks_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /backbone/routers/users_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2012-12-04 17:34:53 +0100
+Processing by ProfilesController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 17:34:54 +0100
+Processing by TalksController#index as JSON
+  [1m[35mTalk Load (0.2ms)[0m  SELECT "talks".* FROM "talks" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 17:35:08 +0100
+Processing by TalksController#index as JSON
+  [1m[36mTalk Load (0.3ms)[0m  [1mSELECT "talks".* FROM "talks" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/talks" for 127.0.0.1 at 2012-12-04 17:35:26 +0100
+Processing by TalksController#index as JSON
+  [1m[35mTalk Load (0.2ms)[0m  SELECT "talks".* FROM "talks" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 1.0ms)

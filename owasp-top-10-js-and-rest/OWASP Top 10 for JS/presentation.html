@@ -149,6 +149,24 @@ if (re.test(relativePath)) {
   </slide>
 
   <slide>
+    <hgroup><h2>URL fragments are kept through redirects</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>http://www.example.com/redirect#/account/123456890</li>
+        <li>http://www.evil.com/#/account/123456890</li>
+        <li>HTTP status codes 301, 302, 303, 307, 308</li> 
+        <li>Works in Chrome and FF, but not in IE9</li>
+        <li class="urlify">http://erlend.oftedal.no/blog/research/redirect/</li>
+      </ul>      
+      <footer class="source">Courtesy of Kalle Zetterlund</footer>
+    </article>
+  </slide>
+
+
+
+
+
+  <slide>
     <hgroup><h2>Fixing Unvalidated Redirects and Forwards</h2></hgroup>
     <article>
       <ul class="build">
@@ -380,6 +398,23 @@ Access-Control-Allow-Credentials: true</pre>
   </slide>
 
   <slide>
+    <hgroup><h2>CSRF + JSON</h2></hgroup>
+    <article class="build">
+      <pre class="prettyprint lang-html">&lt;html>  
+  &lt;form action="http://example.com" method="post" enctype="text/plain"&gt;
+    &lt;input name='{"a":1,"b":{"c":3}, "ignore_me":"' value='test"}' type='hidden'&gt;
+    &lt;input type=submit&gt;
+  &lt;/form&gt;  
+&lt;/html&gt;</pre>
+      <pre class="prettyprint lang-js">{"a":1,"b":{"c":3}, "ignore_me":"=test"}</b>
+      </pre>
+      <footer class="source" style="bottom: 55px"><span class="urlize">http://blog.kotowicz.net/2011/04/how-to-upload-arbitrary-file-contents.html</span></footer>      
+    </article>
+  </slide>
+
+
+
+  <slide>
     <hgroup><h2>CSRF + Cross Domain XHR</h2></hgroup>
     <article>
       <pre class="prettyprint">function fileUpload(url, fileData, fileName) {
@@ -485,7 +520,7 @@ Access-Control-Allow-Credentials: true</pre>
   </slide>
 
   <slide>
-    <hgroup><h2>Stored Cross Site Scripting</h2></hgroup>
+    <hgroup><h2>Stored/Persistent Cross Site Scripting</h2></hgroup>
     <article>
       <div class="build">
         <img src="images/fig_xss_stored_1.png" style="z-index: 10; top: 175px; position: absolute;" />
@@ -539,6 +574,18 @@ Access-Control-Allow-Credentials: true</pre>
         </ul>
     </article>
   </slide>
+
+  <slide>
+    <hgroup><h2>Client-side Stored Cross Site Scripting</h2></hgroup>
+    <article>
+      <ul>
+        <li>XSS vector in hash fragment (#/article/&lt;script>alert(1)&lt;/script>)</li>
+        <li>Data is stored in browser storage</li>
+        <li>Persistent - yet invisible to server</li>
+      </ul>
+    </article>
+  </slide>
+
 
   <slide>
     <hgroup><h2></h2></hgroup>
