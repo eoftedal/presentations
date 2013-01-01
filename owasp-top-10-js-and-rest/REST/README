@@ -1,2 +1,0 @@
-mvn jetty:run -Djetty.port=9998
-
