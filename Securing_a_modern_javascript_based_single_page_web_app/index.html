@@ -1,0 +1,716 @@
+<!--
+Google IO 2012 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OWASP</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground" style="background: #F0F0FC url('images/OWASP-1.jpg') left bottom no-repeat; background-size: cover;">
+      <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+ <slide>
+    <hgroup><h2>Who am I?</h2></hgroup>
+    <article>
+      <img src="images/erlend.jpg" style="position: absolute; bottom: 2.5em; right: 1em; " />
+      <ul>
+        <li>Work as a developer</li>
+        <li>Leader of the Security Competency group at <a href="http://www.bekk.no">BEKK</a></li>
+        <li><a href="https://www.owasp.org/index.php/Norway">OWASP Norway Chapter</a> lead</li>
+        <li>Member of <a href="http://www.honeynor.no/">Norwegian Honeynet Project</a></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>JavaScript</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>Modern web apps rely heavily on JavaScript</li>
+        <li>Some even use it at the server side</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup><h2>JavaScript</h2></hgroup>
+    <article>
+      <ul id="numbers" class="build">
+      </ul>
+      <script>
+        var val = "1000000";
+        for (var i = 0; i < 10; i++) {
+          document.getElementById("numbers").innerHTML += "<li>" + val + "0 === " + val+ "1 : " + (parseInt(val + "0") === parseInt(val + "1")) + "</li>";
+          val += "0";
+        }
+      </script>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>JavaScript</h2></hgroup>
+    <article class="build">
+      <pre class="prettyprint">
+if (a == "Hello" && a == "world") { //Huh?
+  document.write("Hello world")
+}
+      </pre>
+      <pre class="prettyprint lang-js">
+var a = {  
+  t: false, 
+  valueOf: function() { 
+    return (this.t = !this.t) ? "Hello" : "world" 
+  }
+}
+      </pre>
+    </article>
+  </slide>
+
+
+
+
+  <slide>
+    <hgroup><h2>Single Page Web App</h2></hgroup>
+    <article>
+        <div class="columns-2">
+          <ul>
+            <li>Browser loads a single HTML-file</li>
+            <li>File includes references to JavaScript</li>
+            <li>The JavaScript loads data and templates</li>
+            <li>Navigation without reload</li>
+          </ul>
+          <ul>
+            <img src="images/app.png" style="float: right; margin-right: 30px; " />
+          </ul>
+        </div>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup><h2>Single Page Web App - state</h2></hgroup>
+    <article>
+        <ul class="build">
+          <li>State is maintained via #-URLs</li>
+          <pre>http://example.com/#/inbox/32</pre>
+          <li>Allows bookmarking</li>
+        </ul>
+        <ul class="build">
+          <li>New alternative feature: <code>pushState()</code></li>
+          <li>Change URL without reload</li>
+        </ul>
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup><h2>JS HTML Templating</h2></hgroup>
+    <article>
+      <ul>
+        <li>Mix between JavaScript and HTML</li>
+        <li>Typically compiled to javascript (server-side or client-side)</li>
+        <li>Templating languages: mustache.js, underscore.js etc.</li>
+      </ul>
+      <pre class="prettyprint lang-html">
+&lt;ul&gt;
+  &lt;% emails.each(function(email) { %&gt;
+    &lt;li&gt;&lt;a href="#/emails/&lt;%= email.get("id") %&gt;"&gt;&lt;%= email.get("subject") %&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;% }); %&gt;
+&lt;/ul&gt;</pre>
+      <pre class="prettyprint lang-html">
+&lt;ul&gt;
+  &lt;% emails.each(function(email) { %&gt;
+    &lt;li&gt;&lt;a href="#/emails/{{ email.get("id") }}"&gt;{{ email.get("subject") }}&lt;/a&gt;&lt;/li&gt;
+  &lt;% }); %&gt;
+&lt;/ul&gt;</pre>
+    </article>
+  </slide>  
+
+  <slide>
+    <hgroup><h2>Example: Underscore.js</h2></hgroup>
+    <article>
+      <ul>
+        <li>Utilities and HTML templating</li>
+        <li>Templating has three functions:<ul class="noitem">
+          <li><code>&lt;%&nbsp;  %&gt;</code> - evaluate code</li>
+          <li><code>&lt;%= %&gt;</code> - output</li>
+          <li><code>&lt;%- %&gt;</code> - HTML-escaped output</li>
+        </ul></li>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>Domain Driven Security analysis - Multipage</h2></hgroup>
+    <article>
+      <div id="dds"></div>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup><h2>Domain Driven Security analysis - Single Page</h2></hgroup>
+    <article>
+      <div id="dds2"></div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>Circumventing client side validation</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>Changing HTML</li>
+        <li>Changing javascript data within the browser</li>
+        <li>Changing request in proxy</li>
+        <li>Changing response in proxy</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Promiscuous services</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Is your service showing too much?</li>
+        <li>Does it allow others to touch its privates?</li>
+      </ul>
+    </article>
+  </slide>
+
+    <slide>
+    <hgroup>
+      <h2>Promiscuous services - Mass assignment</h2>
+    </hgroup>
+    <article>
+      <div class="build">
+        <ul class="build">
+          <li>Change fields not available through UI</li>
+          <li>Send JSON request with unexpected fields</li>
+        </ul>
+        <img src="images/egor.png" style="float: right;">
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Promiscuous services - Fixing</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Limit exposed fields in reponses</li>
+        <li>Ignore unwanted fields in requests</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Gluttonous services - Overconsumption</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>If app i storing JSON documents in a document database with no filtering...</li>
+        <li>And Attacker sends 100,000 fields for each doc...</li>
+        <li>Example: The maximum MongoDb document size is 16MB</li>
+      </ul>
+    </article>
+  </slide>
+
+
+ <slide>
+    <hgroup><h2>Cross Site Request Forgery (CSRF)</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>User visits attacker's or hacked site</li>
+        <li>Site initiates request towards a victim site where the user is logged in</li>
+          <ul>
+            <li>For GET request use &lt;img&gt;</pre> tag</li>
+            <li>For POST request, use hidden form. Javascript to post form</li>
+          </ul>
+        <li>Data is changed/deleted or settings altered</li>
+        <li>Request comes from a given user</li>
+      </ul>
+      <ul class="build">
+        <li>Examples:<ul>
+        <li>Change DNS of home router</li>
+        <li>Post to twitter or Facebook</li>
+        <li>Request application on internal network</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup><h2>CSRF + JSON</h2></hgroup>
+    <article class="build">
+      <pre class="prettyprint lang-html">&lt;html>  
+  &lt;form action="http://example.com" method="post" enctype="text/plain"&gt;
+    &lt;input name='{"a":1,"b":{"c":3}, "ignore_me":"' value='test"}' type='hidden'&gt;
+    &lt;input type=submit&gt;
+  &lt;/form&gt;  
+&lt;/html&gt;</pre>
+      <pre class="prettyprint lang-js">{"a":1,"b":{"c":3}, "ignore_me":"=test"}</b>
+      </pre>
+      <footer class="source" style="bottom: 55px"><span class="urlize">http://fr.slideshare.net/senchainc/application-security-for-rias-9998532</span></footer>      
+    </article>
+  </slide>
+
+
+<slide>
+    <hgroup><h2>CSRF + Cross Domain XHR</h2></hgroup>
+    <article>
+      <pre class="prettyprint" style="font-size: 18px; line-height: 20px;">function fileUpload(url, fileData, fileName) {
+ var fileSize = fileData.length;
+ var boundary = "xxxxxxxxx";
+ var xhr = new XMLHttpRequest();
+ xhr.open("POST", url, true);
+ xhr.setRequestHeader("Content-Type", 
+   "multipart/form-data, boundary="+boundary);
+ xhr.setRequestHeader("Content-Length", fileSize);
+ var body = "--" + boundary + "\r\n";
+ body += 'Content-Disposition: form-data; name="contents"; filename="'
+   + fileName + '"\r\n';
+ body += "Content-Type: application/octet-stream\r\n\r\n";
+ body += fileData + "\r\n";
+ body += "--" + boundary + "--";
+ xhr.send(body);
+ return true;
+}</pre>
+      <footer class="source" style="bottom: 55px"><span class="urlize">http://blog.kotowicz.net/2011/04/how-to-upload-arbitrary-file-contents.html</span></footer>      
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Testing your JSON services</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>A REST API is stable - a website is not</li>
+        <li>Integration tests - booting and actually running HTTP requests</li>
+        <li>Can automate testing of:
+          <ul>
+            <li>CSRF protection</li>
+            <li>Input validation</li>
+            <li>Data exposure</li>
+            <li>Mass assignment</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>CS#RF</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>Does a hash change make your app change data?</li>
+        <li style="color: #090">Open document in edit mode:<br><code>http://conference.cfn/#talks/1/edit</code></li>
+        <li style="color: #900">Delete document:<br><code>http://conference.cfn/#talks/1/delete</code></li>
+        <li>Circumvents CSRF-protection - the app will actually send the token</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>CS#RF - why does it work?</h2></hgroup>
+    <article>
+      <ol class="build">
+        <li>Browser opens url</li>
+        <li>JS framework bootstraps (this allows bookmarking)</li>
+        <li>JS framework processes route</li>
+        <li>CSRF token is included in ajax request</li>
+        <li>PWN</li>
+      </ol>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>CS#RF - protection</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>A hash change should not cause changes on the server</li>
+        <li>Bring up delete dialog on:<br><code>http://conference.cfn/#talks/1/delete</code></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>Reflected Cross Site Scripting</h2></hgroup>
+    <article>
+      <img src="images/fig_xss_reflected.png" style="z-index: 10; top: 200px; position: absolute;" />
+      <footer class="source">Image source: <a href="http://twitter.com/johnwilander">@johnwilander</a></footer>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>Reflected - Example</h2></hgroup>
+    <article class="build">
+      <pre class="prettyprint lang-http">http://example.com/?error=<b>Invalid+name</b></pre>
+      <pre class="prettyprint lang-html">&lt;div class="error"&gt;<b>Invalid name</b>&lt;/div&gt;</pre>
+      <pre class="prettyprint lang-http">http://example.com/?error=<b>&lt;script&gt;alert(1)&lt;/script&gt;</b></pre>
+      <pre class="prettyprint lang-html">&lt;div class="error"&gt;<b>&lt;script&gt;alert(1)&lt;/script&gt;</b>&lt;/div&gt;</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>Stored/Persistent Cross Site Scripting</h2></hgroup>
+    <article>
+      <div class="build">
+        <img src="images/fig_xss_stored_1.png" style="z-index: 10; top: 175px; position: absolute;" />
+        <img src="images/fig_xss_stored_2.png" style="z-index: 11; top: 200px; position: absolute;" />
+      </div>      
+      <footer class="source">Image source: <a href="http://twitter.com/johnwilander">@johnwilander</a></footer>
+    </article>
+  </slide>
+
+
+
+  <slide>
+    <hgroup><h2 style="z-index: 100; position: absolute;">DOM-based Cross Site Scripting</h2></hgroup>
+    <article>
+      <img src="images/fig_xss_dom.png" style="xz-index: 10; top: 150px; position: absolute;" />
+      <footer class="source">Image source: <a href="http://twitter.com/johnwilander">@johnwilander</a></footer>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>DOM-based - XSS</h2></hgroup>
+    <article>
+        <ul class="build">
+          <li>Occurs in javascript</li>
+          <li>Not necessarily visible at the server</li>
+          <pre class="lang-xml">http://ex.fm/#!/explore/&lt;script>alert("@vlycser");&lt;/script></pre>
+        </ul>
+        <ul class="build">
+          <li>Insecure handling of input in javascript</li>
+        </ul>
+    </article>
+  </slide>
+
+<slide>
+    <hgroup><h2>DOM-based - XSS - sources</h2></hgroup>
+    <article>
+        <ul class="columns codez">
+          <li>document.URL</li>
+          <li>document.documentURI</li>
+          <li>document.URLUnencoded</li>
+          <li>document.baseURI</li>
+          <li>location</li>
+          <li>location.href</li>
+          <li>location.search</li>
+          <li>location.hash</li>
+          <li>location.pathname</li>
+          <li>window.cookie</li>
+          <li>window.referrer</li>
+          <li>window.name</li>
+          <li>++</li>
+        </ul>
+        <footer class="source">Source: <a href="https://code.google.com/p/domxsswiki/wiki/Sources">domxsswiki</a></footer>
+    </article>
+  </slide>
+
+ <slide>
+    <aside class="note">
+      setTimeout and setInterval taking functions instead of strings, are safe
+    </aside>
+    <hgroup><h2>Some unsafe JavaScript</h2></hgroup>
+    <article>
+      <ul class="codez">
+        <li>eval("...<b>user data</b>...")</li>
+        <li>setTimeout("...<b>user data</b>...", t)</li>
+        <li>setInterval("...<b>user data</b>...", t)</li>
+        <li>new Function("...<b>user data</b>...")</li>
+        <li>document.write("...<b>user data</b>...")</li>
+        <li>document.writeln("...<b>user data</b>...")</li>
+        <li>element.innerHTML = "...<b>user data</b>..."</li>
+        <li>Range.createContextualFragment("..<b>user data</b>...")</li>
+        <li>HTMLButton.value = "..<b>user data</b>..."</li>
+        <li>window.location = "<b>user supplied URI</b>"</li>
+        <li>a.href = "<b>user supplied URI</b>"</li>
+        <li>++</li>
+      </ul>
+      <footer class="source">Source: <a href="https://code.google.com/p/domxsswiki/wiki/Sinks">domxsswiki</a></footer>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup><h2>Unsafe jQuery functions</h2></hgroup>
+    <article>
+      <ul class="columns codez">
+        <li>$.after()</li>
+        <li>$.append()</li>
+        <li>$.appendTo()</li>
+        <li>$.before()</li>
+        <li>$.html()</li>
+        <li>$.insertAfter()</li>
+        <li>$.insertBefore()</li>
+        <li>$.prepend()</li>
+        <li>$.prependTo()</li>
+        <li>$.replaceAll()</li>
+        <li>$.replaceWith()</li>
+        <li>$.unwrap()</li>
+        <li>$.wrap()</li>
+        <li>$.wrapAll()</li>
+        <li>$.wrapInner()</li>
+      </ul>
+      <footer class="source">Source: <span class="urlify">http://twitpic.com/95n3ak</span></footer>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>Safe jQuery functions</h2></hgroup>
+    <article>
+      <ul class="build codez">
+        <li>$.text()</li>
+        <li>$.attr() - unless attr is JS event handler</li>
+      </ul>
+      <div class="build" style="margin-top: 1.5em;">
+        <div>
+          <footer class="source">Source: <span class="urlify">https://github.com/chrisisbeef/jquery-encoder</span></footer>
+          <h3>jQuery encoder</h3>
+        </div>
+      </div>
+      <ul class="build" style="margin-top: 1em">
+        <li>$.encoder.canonicalize()</li>
+        <li>$.encoder.encodeForCSS()</li>
+        <li>$.encoder.encodeForHTML()</li>
+        <li>$.encoder.encodeForHTMLAttribute()</li>
+        <li>$.encoder.encodeForJavaScript()</li>
+        <li>$.encoder.encodeForURL()</li>
+      </ul>      
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup><h2>HTML JavaScript Templates</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>What kinds of coding/output-possibilites does it have?</li>
+        <li>Does it escape input?</li>
+        <li>What kinds of escaping?</li>
+        <li>Is the escaping <a href="https://www.owasp.org/index.php/XSS_%28Cross_Site_Scripting%29_Prevention_Cheat_Sheet">context based</a>?</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>Underscore.js</h2></hgroup>
+    <article>
+      <ul class="build support">
+        <li>Tags:<ul class="noitem">
+          <li><code>&lt;%&nbsp;  %&gt;</code> - evaluate code</li>
+          <li><code>&lt;%= %&gt;</code> - output</li>
+          <li><code>&lt;%- %&gt;</code> - HTML-escaped output</li>
+        </ul></li>
+        <li>Escaping
+          <pre class="inbetween prettyprint lang-js">_.escape = function(string) {
+  return (''+string).replace(/&amp;/g, '&amp;amp;').
+                     replace(/&lt;/g, '&amp;lt;').
+                     replace(/&gt;/g, '&amp;gt;').
+                     replace(/"/g, '&amp;quot;').
+                     replace(/'/g, '&amp;#x27;').
+                     replace(/\//g,'&amp;#x2F;');
+};</pre>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>This is all well and good as long as...</h2></hgroup>
+    <article>
+      <ul class="build" style="margin-top: 1em">
+        <li>... you are not outputing inside javascript event handlers.</li>
+        <div>
+          <pre class="inbetween smaller lang-jst">&lt;button onclick="return confirm('Really delete &lt;%- model.title %&gt;')"&gt;Delete&lt;/button&gt;</pre>
+          <pre class="inbetween smaller">&lt;button onclick="return confirm('Really delete &amp;#x27;);alert(&amp;x27;XSS')"&gt;Delete&lt;/button&gt;</pre>
+        </div>
+        <li>... you are not using quote-less attributes:
+          <pre class="inbetween smaller lang-jst">&lt;img title=&lt;%- model.title %&gt;  ... &gt;</pre>
+          <pre class="inbetween smaller lang-html">&lt;img title=monkey onmouseover=alert(/XSS/.source) ... &gt;</pre>
+        </li>
+        <li>... you are not outputting data inside <code>style</code> attributes or tags</li>
+        <li>... you are not outputting data inside <code>script</code> tags</li>
+      </ul>
+      <div class="build" style="margin-top: 2em">
+        <p>For more info - see the <a href="https://www.owasp.org/index.php/XSS_%28Cross_Site_Scripting%29_Prevention_Cheat_Sheet">OWASP XSS Prevention Cheat sheet</a></p>
+      </div>      
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>helmet.js - an experiment</h2></hgroup>
+    <article>
+      <ul class="build" style="margin-top: 1em">
+        <li>Code on github: <span class="urlify">https://github.com/eoftedal/helmet.js</span></li>
+        <li><code>&lt;%&nbsp;  %&gt;</code> - evaluate code</li>
+        <li><code>&lt;%- %&gt;</code> - unescaped/raw output</li>
+        <li><code>&lt;%= %&gt;</code> - <b>contextually</b> escape output or refuse output</li>
+        <li>Playground at: <span class="urlify">http://research.insecurelabs.org/helmet.js</span></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>helmet.js - bypass</h2></hgroup>
+    <article class="build">
+      <pre class="">&lt;a
+  href=&lt;%=url%&gt;
+  title="Buy &lt;%=number%> at &lt;%=price%&gt; = $&lt;%=cost%&gt;/month
+  AND SAVE $$$"&gt;BUY NOW&lt;/a&gt;</pre>
+      <pre class="prettyprint">{"url":"","number":42,"price":"onmouseover","cost":"=alert(1)/"}</pre>
+      <pre class="">&lt;a href="title=&quot;Buy" 42="" at="" onmouseover="$=alert(1)//month" and="" save="" $$$"="">BUY NOW&lt;/a></pre>
+      <footer class="source">Contributor: <a href="http://twitter.com/steike">@steike</a></footer>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup><h2>helmet.js - bypass</h2></hgroup>
+    <article class="build">
+      <pre class="prettyprint">&lt;svg>
+&lt;a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#">
+&lt;set attributeName="xlink:href" begin="0s" to="&lt;%= url %>" />&lt;circle r=40>
+&lt;/a>
+&lt;/svg></pre>
+      <pre class="prettyprint lang-js">{"url":"javascript:alert(1)"}</pre>
+      <footer class="source">Contributor: <a href="http://twitter.com/0x6D6172696F">@0x6D6172696F</a></footer>
+    </article>
+  </slide>
+
+  <slide>
+    <aside class="note">
+      Background: In the early days of the web, servers would send the wrong content-type all the time
+      <p>GIFAR: GIF header først i filen. ZIP (JAR) header sist i filen.</p>
+    </aside>
+    <hgroup><h2>Content Sniffing</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>Browser secondguesses Content-Type header</li>
+        <li>Looks at reponse content, URI and also tag that initiated the request</li>
+        <li>An attacker can trick older browsers into guessing the wrong Content-Type</li>
+      </ul>
+      <ul class="build">
+        <li>Example: GIFAR</li>
+        <li>Both a valid GIF and a JAR</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>Avoiding Content Sniffing</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>Disable content sniffing:</li>
+          <pre>X-Content-Type-Options: nosniff</pre>
+        <li>Have browser prompt for download:</li>
+        <pre>Content-Disposition: attachment; filename=data.json</pre>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>Content Security Policy</h2></hgroup>
+    <article>
+      <ul class="build">
+        <pre class="inbetween lang-xml smaller">Content-Security-Policy: default-src 'self'; script-src 'self' *.googleapis.com</pre>
+        <li>Upcoming <a href="http://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html">standard</a></li>
+        <li>Fits well with single page web apps</li>
+        <li>Server instructs browser through header (or meta tag in 1.1)</li>
+        <li>By default disallows the unsafe versions of <code>eval/setTimeout/setInterval/new Function</code></li>
+        <li>By default disallows inline CSS and JavaScript</li>
+        <li>Allows developers to specify which domains scripts, images, videos etc. can be loaded from</li>
+        <li>Supported in Chrome, Firefox, Safari and Opera</li>
+        <li>Test your browser: <span class="urlify">http://csptesting.herokuapp.com/</span></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>Attack - JSON in iframes</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>Drag n drop clickjacking</li>
+        <li>Fake captchas - steal CSRF-token</li>
+      </ul>
+      <ul class="build">
+        <h3>Protection:</h3>
+        <li>Hide JSON from iframes:<pre>X-Frame-Options: DENY</pre></li>
+        <li>Force download instead of view:<pre>Content-Disposition: attachment; filename=data.json</pre></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>Server side JavaSript</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>eval on the server side...</li>
+        <li>...is so much worse than SQL-injection</li>
+        <li>Direct remote code exec</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup><h2>Some final thoughts on frameworks</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>OWASP Top 10 2013 - A9 Using Components with known vulnerabilities</li>
+        <li>If you use a framework...</li>
+        <li>Keep it up to date!</li>
+        <li>Security flaws may be discovered at a later time</li>
+      </ul>
+
+      <ul class="build" style="margin-top: 2em">
+        <li>Yahoo! 0-Day - 13. jan 2013</li>
+        <li>sessvars.js</li>
+        <li>Security update May 17, <b>2008</b> - Sanitizer added to prevent eval() of malicious code</li>
+      </ul>
+    </article>
+  </slide>
+
+
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
