@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>SVG - Nyttig og skummelt på en gang</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+
+		<style>
+			#figure {
+				xwidth: 780px;
+				height: 450px;
+				text-align: center;
+				background: url(free-paper-texture-13.jpg) no-repeat top center;
+			}
+			#figure svg {
+				margin: 0 auto;
+			}
+		</style>
+		<style>
+		#figure div { 
+		    -webkit-filter: url(#textFilter);
+		    filter: url(#textFilter); 
+		}
+		</style>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section>
+					<h1>SVG</h1>
+					<h3>Nyttig og skummelt på en gang</h3>
+				</section>
+
+				<section>
+					<h2>Hva er SVG?</h2>
+					<ul> 
+						<li class="fragment">Et bildeformat!</li>
+						<li class="fragment">Et bildeformat?</li>
+						<li class="fragment">Er PDF et dokument-format?</li>
+						<li class="fragment">Virkelig?</li>
+					</ul>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## SVG?
+						* Scalable Vector Graphics
+						* XML
+						* Støttet inline i HTML5
+					</script>
+				</section>
+				<section>
+				<pre><code><svg xmlns=“http://www.w3.org/1999/svg“>
+   <circle cx="100" cy="100" r="40" stroke="black" stroke-width="2" fill="red" />
+</svg></code></pre>
+		<svg xmlns=“http://www.w3.org/1999/svg“ width=400 height=200>
+   <circle cx="100" cy="100" r="40" stroke="black" stroke-width="2" fill="red" />
+</svg>
+				</section>
+				<section>
+					<img src="tiger.svg"  />
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						## Tilbake til SVG i HTML5
+						* Husk at SVG er et "bildeformat" 
+						* XML inn i HTML... 
+						* Validering / sanitizing
+					</script>
+				</section>
+				<section>
+					<h2>Tags</h2>
+					<ul>
+						<li><code>&lt;script&gt;</code> - JavaScript</li>
+						<li><code>&lt;foreignObject&gt;</code> - flash, java, etc.</li>
+					</ul>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						## JavaScript
+						* Kjører ikke hvis du laster SVG i en &lt;img>-tag
+						* Uventet oppførsel - åpne urlen rett i browser
+
+						![Yo](eksempel.svg)
+					</script>
+				</section>
+				<section>
+					<h2>Rar JavaScript</h2>
+						<pre><code>&lt;svg>
+&lt;a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#">
+&lt;set attributeName="xlink:href" begin="0s" to="javascript:alert(1)" />
+&lt;circle r=40 />
+&lt;/a>
+&lt;/svg></code></pre>
+					</script>
+				</section>
+				<section>
+<pre><code>
+&lt;svg xmlns="http://www.w3.org/2000/svg">
+&lt;g onload="javascript:alert(1)">&lt;/g>
+&lt;/svg>
+</code></pre>
+
+<pre><code>
+&lt;svg xmlns="http://www.w3.org/2000/svg">
+&lt;animation xlink:href="javascript:alert(1)"/>
+&lt;/svg>
+</code></pre>
+
+<pre><code>
+&lt;svg xmlns="http://www.w3.org/2000/svg">
+&lt;foreignObject xlink:href="javascript:alert(1)"/>
+&lt;/svg>
+</code></pre>
+
+<pre><code>
+&lt;svg xmlns="http://www.w3.org/2000/svg"> 
+&lt;set attributeName="onmouseover" to="alert(1)"/> 
+&lt;/svg>
+</code></pre>
+
+<pre><code>
+&lt;svg xmlns="http://www.w3.org/2000/svg"> 
+&lt;handler 
+xmlns:ev="http://www.w3.org/2001/xml­events" 
+ev:event="load"
+>alert(1)&lt;/handler>
+&lt;/svg>
+</code></pre>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## Hva om man bruker SVGer andre steder?
+						* Opera - favicon.ico med youtube-film
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## "The SVG that called me"
+						* `<foreignObject>`
+						* Mario Heiderich
+						* SVG, som innehold en PDF som ringte på Skype
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## SVG filter
+						* Convolution, blur, displacement map
+						* Kan legges på HTML elementer
+					</script>
+				</section>
+				<section>
+					<h2>SVG Filter - blur</h2>
+					<h3 id="blurable1">Blur 1</h3>
+					<h3 id="blurable2">Blur 2</h3>
+					<h3 id="blurable3">Blur 3</h3>
+					<h3 id="blurable4">Blur 4</h3>
+
+					<svg height=0 width=0>
+						<defs>
+							<filter id="blur1"><feGaussianBlur stdDeviation="1" /></filter>
+							<filter id="blur2"><feGaussianBlur stdDeviation="2" /></filter>
+							<filter id="blur3"><feGaussianBlur stdDeviation="3" /></filter>
+							<filter id="blur4"><feGaussianBlur stdDeviation="4" /></filter>
+						</defs>
+					<svg>
+					<style>
+					h3#blurable1 { -webkit-filter: url(#blur1); filter: url(#blur1); }
+					h3#blurable2 { -webkit-filter: url(#blur2); filter: url(#blur2); }
+					h3#blurable3 { -webkit-filter: url(#blur3); filter: url(#blur3); }
+					h3#blurable4 { -webkit-filter: url(#blur4); filter: url(#blur4); }
+					</style>
+				</section>
+				<section>
+<h3 id="blur">Blur</h3>
+<svg height=0 width=0>
+	<defs>
+		<filter id="blur1"><feGaussianBlur stdDeviation="1" /></filter>
+	</defs>
+<svg>
+<style>
+#blur { -webkit-filter: url(#blur1); filter: url(#blur1); }
+</style>
+				<pre><code>&lt;h3 id="blur">Blur&lt;/h3>
+&lt;svg height=0 width=0>
+	&lt;defs>
+		&lt;filter id="blur1">
+			&lt;feGaussianBlur stdDeviation="1" />
+		&lt;/filter>
+	&lt;/defs>
+&lt;svg>
+&lt;style>
+#blur { -webkit-filter: url(#blur1); filter: url(#blur1); }
+&lt;/style></code></pre>
+</section>
+				<section>
+					<h2>SVG Filter - displacement map</h2>
+					<h3 id="displace1">Displacement map</h3>
+					<h3 id="displace2">Displacement map</h3>
+
+					<svg height=0 width=0>
+						<defs>
+						<filter id="disp1">
+          <feTurbulence type="fractalNoise" baseFrequency="1.015" numOctaves="2" result="turbulence_3" data-filterId="3" />
+          <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="turbulence_3" scale="5" result="fdm1" />          
+
+
+	          			</filter>
+						<filter id="disp2">
+          <feTurbulence type="fractalNoise" baseFrequency=".115" numOctaves="2" result="turbulence_3" data-filterId="3" />
+          <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="turbulence_3" scale="5" result="fdm1" />          <feGaussianBlur stdDeviation="0.5" />
+
+	          			</filter>
+						</defs>
+					<svg>
+					<style>
+					h3#displace1 { -webkit-filter: url(#disp1); filter: url(#disp1); }
+					h3#displace2 { -webkit-filter: url(#disp2); filter: url(#disp2); }
+					</style>
+				</section>
+
+				<section>
+					<a href="http://ie.microsoft.com/testdrive/graphics/hands-on-css3/hands-on_svg-filter-effects.htm" target="_blank">
+					http://ie.microsoft.com/testdrive/graphics/hands-on-css3/hands-on_svg-filter-effects.htm
+					</a>
+				</section>
+
+
+				<section data-markdown>
+					<script type="text/template">
+						## Precision Timing – Attacking browser privacy with SVG and CSS
+						Paul Stone, OWASP AppSec EU 2013 
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						## Angrep
+						* feMorphology - gjør en linje tykker/tynnere
+						* requestAnimationFrame
+						* -moz-element(#idTilEtAnnetElement)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## Reading pixel from iFrame
+						### Timing attack
+						* Crop iframe to single pixel (0,0)
+						* Enlarge pixel by x100
+						* Apply SVG filter
+						* Time using requestAnimationFrame
+						* Move to next pixel (0, 1)
+						* Repeat
+					</script>
+				</section>
+				<section data-markdown>
+					Video @ 35:00
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						## Optimaliseringer
+						* Hvor mange pixler må man lese per bokstav?
+						* Fordrer en kjent font
+						* `&lt;iframe src="view-source:http://..."`
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						## Gofigure
+						* http://eoftedal.github.io/eoftedal/gofigure
+						* Lite bibliotek for å animere figurer
+					</script>
+				</section>
+
+				<section>
+					<h2>Demo figure</h2>
+					<div id="figure">
+
+					</div>
+				</section>
+
+				<section>
+					<h2>This is the end</h2>
+
+				</section>
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/gofigure/plugin.js', condition: function() { return true; } }
+				]
+			});
+
+		</script>
+		<script>
+		Reveal.addEventListener( 'ready', function( event ) {
+			setTimeout(function() {
+				var figure = gofigure.create('figure', '700', '450');
+			    var opts = {arrowheads: "end" };
+			    gofigureplugin.addStep('figure', figure.box(100, 100, 100, 200, opts).centeredText(150, 320, "Database"));
+			    gofigureplugin.addStep('figure', figure.arrow(200, 200, 300, 200, opts));
+			    gofigureplugin.addStep('figure', figure.box(300, 100, 100, 200, opts).centeredText(350, 320, "Server"));
+			    gofigureplugin.addStep('figure', figure.arrow(400, 200, 500, 200, opts));
+			    gofigureplugin.addStep('figure', figure.box(500, 100, 100, 200, opts).centeredText(550, 320, "Browser"));
+			}, 1000);
+		});
+
+		</script>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+    <defs>
+        <filter id="textFilterz">
+          <feGaussianBlur stdDeviation="1" />
+        </filter>
+        <filter id="textFilter">
+          <feTurbulence type="fractalNoise" baseFrequency="1.005" numOctaves="2" result="turbulence_3" data-filterId="3" />
+          <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="turbulence_3" scale="5" result="fdm1" />
+          <feTurbulence type="fractalNoise" baseFrequency=".015" numOctaves="2" result="turbulence_4" data-filterId="4" />
+          <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="fdm1" in2="turbulence_4" scale="5" />
+          <feGaussianBlur stdDeviation="0.7" />
+          <feComposite operator="in" in2="inputB" />
+          <feComposite operator="arithmetic" k2="1" k3="1" in2="inputB" />
+        </filter>
+    </defs>
+</svg>
+
+	</body>
+</html>
