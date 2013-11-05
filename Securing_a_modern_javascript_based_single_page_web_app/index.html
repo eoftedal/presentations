@@ -164,12 +164,12 @@ var a = {
     </article>
   </slide>
 
-  <slide>
+  <!-- slide>
     <hgroup><h2>Domain Driven Security analysis - Multipage</h2></hgroup>
     <article>
       <div id="dds"></div>
     </article>
-  </slide>
+  </slide -->
 
 
   <slide>
@@ -180,13 +180,14 @@ var a = {
   </slide>
 
   <slide>
-    <hgroup><h2>Circumventing client side validation</h2></hgroup>
+    <hgroup><h2>Circumventing client side validation/calculations</h2></hgroup>
     <article>
       <ul class="build">
         <li>Changing HTML</li>
         <li>Changing javascript data within the browser</li>
         <li>Changing request in proxy</li>
         <li>Changing response in proxy</li>
+        <li>Directly attack the JSON service</li>
       </ul>
     </article>
   </slide>
@@ -238,7 +239,9 @@ var a = {
       <ul class="build">
         <li>If app i storing JSON documents in a document database with no filtering...</li>
         <li>And Attacker sends 100,000 fields for each doc...</li>
-        <li>Example: The maximum MongoDb document size is 16MB</li>
+        <li>Example: The maximum MongoDb document size is 16MB <br><br></li>
+
+        <li>&rarr; Again please strip unwanted fields!</li>
       </ul>
     </article>
   </slide>
@@ -252,7 +255,7 @@ var a = {
         <li>Site initiates request towards a victim site where the user is logged in</li>
           <ul>
             <li>For GET request use &lt;img&gt;</pre> tag</li>
-            <li>For POST request, use hidden form. Javascript to post form</li>
+            <li>For POST request, use hidden form + Javascript to post form</li>
           </ul>
         <li>Data is changed/deleted or settings altered</li>
         <li>Request comes from a given user</li>
@@ -269,16 +272,16 @@ var a = {
 
   <slide>
     <hgroup><h2>CSRF + JSON</h2></hgroup>
-    <article class="build">
+    <article class="build"><div>
       <pre class="prettyprint lang-html">&lt;html>  
   &lt;form action="http://example.com" method="post" enctype="text/plain"&gt;
     &lt;input name='{"a":1,"b":{"c":3}, "ignore_me":"' value='test"}' type='hidden'&gt;
     &lt;input type=submit&gt;
   &lt;/form&gt;  
 &lt;/html&gt;</pre>
+      <footer class="source" style="bottom: 55px">John Wilander: <span class="urlize">http://fr.slideshare.net/senchainc/application-security-for-rias-9998532</span></footer></div>      
       <pre class="prettyprint lang-js">{"a":1,"b":{"c":3}, "ignore_me":"=test"}</b>
       </pre>
-      <footer class="source" style="bottom: 55px"><span class="urlize">http://fr.slideshare.net/senchainc/application-security-for-rias-9998532</span></footer>      
     </article>
   </slide>
 
@@ -377,6 +380,37 @@ var a = {
       <pre class="prettyprint lang-html">&lt;div class="error"&gt;<b>Invalid name</b>&lt;/div&gt;</pre>
       <pre class="prettyprint lang-http">http://example.com/?error=<b>&lt;script&gt;alert(1)&lt;/script&gt;</b></pre>
       <pre class="prettyprint lang-html">&lt;div class="error"&gt;<b>&lt;script&gt;alert(1)&lt;/script&gt;</b>&lt;/div&gt;</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <aside class="note">
+      Background: In the early days of the web, servers would send the wrong content-type all the time
+      <p>GIFAR: GIF header først i filen. ZIP (JAR) header sist i filen.</p>
+    </aside>
+    <hgroup><h2>Content Sniffing</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>Browser secondguesses Content-Type header</li>
+        <li>Looks at reponse content, URI and also tag that initiated the request</li>
+        <li>An attacker can trick older browsers into guessing the wrong Content-Type</li>
+      </ul>
+      <ul class="build">
+        <li>Example: GIFAR - Both a valid GIF and a JAR</li>
+        <li>Example: JHTMLSON - Valid JSON, sort of valid HTML</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>Avoiding Content Sniffing</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>Disable content sniffing:</li>
+          <pre>X-Content-Type-Options: nosniff</pre>
+        <li>Have browser prompt for download:</li>
+        <pre>Content-Disposition: attachment; filename=data.json</pre>
+      </ul>
     </article>
   </slide>
 
@@ -608,36 +642,7 @@ var a = {
     </article>
   </slide>
 
-  <slide>
-    <aside class="note">
-      Background: In the early days of the web, servers would send the wrong content-type all the time
-      <p>GIFAR: GIF header først i filen. ZIP (JAR) header sist i filen.</p>
-    </aside>
-    <hgroup><h2>Content Sniffing</h2></hgroup>
-    <article>
-      <ul class="build">
-        <li>Browser secondguesses Content-Type header</li>
-        <li>Looks at reponse content, URI and also tag that initiated the request</li>
-        <li>An attacker can trick older browsers into guessing the wrong Content-Type</li>
-      </ul>
-      <ul class="build">
-        <li>Example: GIFAR</li>
-        <li>Both a valid GIF and a JAR</li>
-      </ul>
-    </article>
-  </slide>
 
-  <slide>
-    <hgroup><h2>Avoiding Content Sniffing</h2></hgroup>
-    <article>
-      <ul class="build">
-        <li>Disable content sniffing:</li>
-          <pre>X-Content-Type-Options: nosniff</pre>
-        <li>Have browser prompt for download:</li>
-        <pre>Content-Disposition: attachment; filename=data.json</pre>
-      </ul>
-    </article>
-  </slide>
 
   <slide>
     <hgroup><h2>Content Security Policy</h2></hgroup>
@@ -662,6 +667,7 @@ var a = {
       <ul class="build">
         <li>Drag n drop clickjacking</li>
         <li>Fake captchas - steal CSRF-token</li>
+        <li>Paul Stone ninja pixel stealing</li>
       </ul>
       <ul class="build">
         <h3>Protection:</h3>
@@ -677,7 +683,8 @@ var a = {
       <ul class="build">
         <li>eval on the server side...</li>
         <li>...is so much worse than SQL-injection</li>
-        <li>Direct remote code exec</li>
+        <li>Direct remote code exec<br><br></li>
+        <img src="images/secure_borat.png">
       </ul>
     </article>
   </slide>
@@ -701,7 +708,17 @@ var a = {
     </article>
   </slide>
 
-
+  <slide class="thank-you-slide segue nobackground dark">
+    <aside class="gdbar right"><img src="images/bekk-logo.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Thank You!&gt;</h2>
+      <br>
+      Slides and code at github.com/eoftedal
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
 
   <slide class="backdrop"></slide>
 

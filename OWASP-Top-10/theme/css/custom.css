@@ -1,0 +1,97 @@
+/* line 1, ../scss/custom.scss */
+.circlecontainer {
+  margin: 0 auto;
+  position: relative;
+  width: 750px;
+  height: 200px;
+}
+
+/* line 4, ../scss/custom.scss */
+.circle {
+  border-radius: 50%;
+  border: 1px solid #000;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  opacity: 0.5;
+  top: 50px;
+  left: 350px;
+  background-color: #00f;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  background: radial-gradient(ellipse at 30% 30%, #9999ff 0%, #0000ff 100%);
+}
+
+/* line 17, ../scss/custom.scss */
+.circle:first-child {
+  left: 0px;
+  background-color: #ff0;
+  background: radial-gradient(ellipse at 30% 30%, #ffff99 0%, #ffff00 100%);
+}
+
+/* line 23, ../scss/custom.scss */
+.wash {
+  border-collapse: collapse;
+}
+
+/* line 27, ../scss/custom.scss */
+.wash th {
+  background: #4d953d;
+  width: 16.5%;
+  font-weight: bold !important;
+}
+
+/* line 32, ../scss/custom.scss */
+table.wash tr td {
+  font-weight: normal;
+  color: #000;
+  font-size: 0.6em;
+}
+
+/* line 37, ../scss/custom.scss */
+.wash td, .wash th {
+  text-align: center;
+  border: 3px solid #444444;
+  font-weight: normal;
+}
+
+/* line 42, ../scss/custom.scss */
+table.wash tr td, table.wash tr th {
+  font-weight: normal;
+}
+
+/* line 47, ../scss/custom.scss */
+.wash .easy {
+  background: #f00;
+}
+
+/* line 50, ../scss/custom.scss */
+.wash .easy td:first-child, .wash .easy td:last-child {
+  background: #fff;
+}
+
+/* line 53, ../scss/custom.scss */
+.wash .average {
+  background: #fb0;
+}
+
+/* line 56, ../scss/custom.scss */
+.wash .difficult {
+  background: #ff0;
+}
+
+/* line 59, ../scss/custom.scss */
+.wash .text td {
+  vertical-align: top;
+  font-weight: normal;
+}
+
+/* line 63, ../scss/custom.scss */
+.translucent {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* line 67, ../scss/custom.scss */
+.new_ {
+  font-weight: bold;
+  color: blue;
+}

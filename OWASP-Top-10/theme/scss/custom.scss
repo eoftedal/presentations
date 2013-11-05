@@ -1,0 +1,70 @@
+.circlecontainer {
+  margin: 0 auto; position: relative; width: 750px; height: 200px;
+}
+.circle {
+  border-radius: 50%;
+  border: 1px solid #000;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  opacity: 0.5;
+  top: 50px; 
+  left: 350px; 
+  background-color: #00f;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+  background: radial-gradient(ellipse at 30% 30%, #99f 0%,#00f 100%);
+}
+.circle:first-child {
+  left: 0px; 
+  background-color: #ff0;
+  background: radial-gradient(ellipse at 30% 30%, #ff9 0%, #ff0 100%);
+}
+
+.wash {
+	border-collapse: collapse;
+}
+
+.wash th {
+	background: #4d953d;
+	width: 16.5%;
+  font-weight: bold !important;
+}
+table.wash tr td {
+	font-weight: normal;
+	color: #000;
+  font-size: 0.6em;
+}
+.wash td, .wash th {
+	text-align: center;
+	border: 3px solid #444444;
+  font-weight: normal;
+}
+table.wash tr td, table.wash tr th {
+  font-weight: normal;
+}
+
+
+.wash .easy {
+	background: #f00;
+}
+.wash .easy td:first-child, .wash .easy td:last-child {
+	background: #fff;
+}
+.wash .average {
+	background: #fb0;
+}
+.wash .difficult {
+	background: #ff0;
+}
+.wash .text td {
+  vertical-align: top;
+  font-weight: normal;
+}
+.translucent {
+  background: rgba(0,0,0,0.5)
+}
+
+.new_ {
+  font-weight: bold;
+  color: #00f
+}

@@ -1,0 +1,534 @@
+<!--
+Google IO 2012 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OWASP</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="all" href="theme/css/custom.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground" style="background: #F0F0FC url('images/OWASP-1.jpg') left bottom no-repeat; background-size: cover;">
+      <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+ <slide>
+    <hgroup><h2>Hvem er jeg?</h2></hgroup>
+    <article>
+      <img src="images/erlend.jpg" style="position: absolute; bottom: 2.5em; right: 1em; " />
+      <ul>
+        <li>Jobber som utvikler</li>
+        <li>Faggruppeleder for sikkerhet i <a href="http://www.bekk.no">BEKK</a></li>
+        <li><a href="https://www.owasp.org/index.php/Norway">OWASP Norway Chapter</a>-leder</li>
+        <li>Medlem av <a href="http://www.honeynor.no/">Norwegian Honeynet Project</a></li>
+        <li>Twitter: @webtonull</a></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill" style="background: #000 url(images/owasp_logo.png) center center no-repeat;">
+
+  </slide>
+
+
+ <slide>
+      <aside class="note">
+      <ul>
+        <li>Awareness/Bevissthet - Ment å skape bevissthet, ikke ment som en standard. De 10 viktigste
+        Ikke tak, men gul.</li>
+        <li>Risiko - Basert på risiko, ikke sårbarheter</li>
+        <li>Prevalence - statistikk fra 7 sikkerhetsselskaper, 500,000 Sårbarheter</li>
+      </ul>
+    </aside>
+    <hgroup><h2>OWASP Top 10</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>Gratis PDF (som alt annet fra OWASP)</li>
+        <li>Kan kjøpes som bok til selvkost</li>
+    </ul>
+     <ul class="build">
+        <li>Bevissthet - ikke en standard</li>
+        <li>Gulv - ikke tak</li>
+      </ul>
+     <ul class="build">
+        <li>Versjoner: 2003, 2004, 2007, 2010, 2013</li>
+        <li>Community effort</li>        
+      </ul>
+    </article>
+  </slide>
+
+   <slide style="background: url(images/Top_10_2013-appsec-risks.png) center center no-repeat" class="fill nobackground">
+  </slide>
+
+
+ <slide>
+    <hgroup><h2>Kategorisering</h2></hgroup>
+    <article>
+      <table class="wash">
+      <tr>
+           <th>Threat Agents</th>
+           <th>Attack Vectors</th>
+           <th>Weakness Prevalence</th>
+           <th>Weakness Detectability</th>
+           <th>Technical Impacts</th>
+           <th>Business Impacts</th>
+      </tr>
+      <tr class="easy">
+        <td rowspan="3">App Specific</td>
+        <td>EASY</td>
+        <td>WIDESPREAD</td>
+        <td>EASY</td>
+        <td>SEVERE</td>
+        <td rowspan="3">App / Business Specific</td>
+      </tr>
+      <tr class="average">
+        <td>AVERAGE</td>
+        <td>COMMON</td>
+        <td>AVERAGE</td>
+        <td>MODERATE</td>
+      </tr>
+      <tr class="difficult">
+        <td>DIFFICULT</td>
+        <td>UNCOMMON</td>
+        <td>DIFFICULT</td>
+        <td>MINOR</td>
+      </tr>
+      </table>    
+    </article>
+  </slide>
+
+  
+ <slide>
+      <aside class="note">
+    </aside>
+    <hgroup><h2>OWASP Top 10 2013</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>A1 - Injection</li>
+        <li>A2 - Broken Authentication and Session Management</li>
+        <li>A3 - Cross Site Scripting (XSS)</li>
+        <li>A4 - Insecure Direct Object Reference</li>
+        <li>A5 - Security Misconfiguration</li>
+        <li class="new_">A6 - Sensitive Data Exposure</li>
+        <li class="new_">A7 - Missing Function Level Access Control</li>
+        <li>A8 - Cross Site Request Forgery (CSRF)</li>
+        <li class="new_">A9 - Using Libraries with Known Vulnerabilities</li>
+        <li>A10 - Unvalidated Redirects and Forwards</li>
+      </ul>
+    </article>
+  </slide>
+
+
+ 
+<slide>
+     <aside class="note">
+      <ul>
+        <li>Consider who can gain access to your sensitive data and any backups of that data. This includes the data at rest, in transit, and even in your customers’ browsers. Include both external and internal threats.</li>
+        <li>Attackers typically don’t break crypto directly. They break something else, such as steal keys, do man-in-the-middle attacks, or steal clear text data off the server, while in transit, or from the user’s browser.</li>
+        <li>The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm usage is common, particularly weak password hashing techniques. Browser weaknesses are very common and easy to detect, but hard to exploit on a large scale. External attackers have difficulty detecting server side flaws due to limited access and they are also usually hard to exploit.</li>
+        <li>Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive data such as health records, credentials, personal data, credit cards, etc.</li>
+        <li>Consider the business value of the lost data and impact to your reputation. What is your legal liability if this data is exposed? Also consider the damage to your reputation.</li>
+      </ul>
+    </aside>
+    <hgroup><h2>A6 Sensitive Data Exposure</h2></hgroup>
+    <article>
+      <p>Sammenslåing av Top 10:</p>
+      <ul>
+        <li>2010-A9: Insufficient Transport Layer Protection</li>
+        <li>2010-A7: Insecure Cryptographic Storage</li>
+      </ul>
+      <br><br>
+      <table class="wash">
+      <tr>
+           <th>Threat Agents</th>
+           <th>Attack Vectors</th>
+           <th>Weakness Prevalence</th>
+           <th>Weakness Detectability</th>
+           <th>Technical Impacts</th>
+           <th>Business Impacts</th>
+      </tr>
+      <tr>
+        <td>App Specific</td>
+        <td class="difficult">DIFFICULT</td>
+        <td class="difficult">UNCOMMON</td>
+        <td class="average">AVERAGE</td>
+        <td class="easy">SEVERE</td>
+        <td>App / Business Specific</td>
+      </tr>
+      </table>    
+    </article>
+  </slide>
+
+ <slide  style="background: #fff url(images/iphone.png) center center no-repeat;background-size: auto 70%;">
+    <aside class="note">
+      <ul>
+        <li>Ukryptert lagring vs. tyveri</li>
+        <li>Bruk av SSL/TLS</li>
+      </ul>
+    </aside>
+    <hgroup><h2></h2></hgroup>
+    <article>
+      <footer class="source">Image CC: <span class="urlify">http://commons.wikimedia.org/wiki/User:Justin14</span></footer>
+    </article>
+  </slide>
+
+ <slide  style="background: #fff url(images/nettbankapper.png) center center no-repeat;background-size: 90% auto;">
+    <hgroup><h2></h2></hgroup>
+    <article>
+      <footer class="source"><span class="urlify">http://www.dinside.no/923295/nettbank-appene-er-saarbare</span></footer>
+    </article>
+  </slide>
+
+ <slide><!-- secure flag på cookie statistikk -->
+    <hgroup><h2>Eksempel - Cookies</h2></hgroup>
+    <article>
+      <div class="build">
+        <pre><code>Set-Cookie: SESSION=sa9d8712hiuhias89d721</code></pre>
+        <pre><code>Set-Cookie: SESSION=sa9d8712hiuhias89d721; Secure</code></pre>
+      </div>
+      <ul class="build">
+        <li><a href="http://dotno.indev.no/">Scan av 100 000 norske domener</a> utført av Einar Otto Stangvik (@einaros)</li>
+        <li>30% av domener med cookies over HTTPS brukte Secure-flagget</li>
+      </ul>
+    </article>
+  </slide>
+
+
+
+ <slide>
+     <aside class="note">
+      <ul>
+        <li>Anyone with network access can send your application a request. Could anonymous users access private functionality or regular users a privileged function?</li>
+        <li>Attacker, who is an authorized system user, simply changes the URL or a parameter to a privileged function. Is access granted? Anonymous users could access private functions that aren’t protected.</li>
+        <li>Applications do not always protect application functions properly. Sometimes, function level protection is managed via configuration, and the system is misconfigured. Sometimes, developers must include the proper code checks, and they forget.
+Detecting such flaws is easy. The hardest part is identifying which pages (URLs) or functions exist to attack.</li>
+        <li>Such flaws allow attackers to access unauthorized functionality. Administrative functions are key targets for this type of attack.</li>
+        <li>Consider the business value of the exposed functions and the data they process.
+Also consider the impact to your reputation if this vulnerability became public.</li>
+      </ul>
+    </aside>
+    <hgroup><h2>A7  Missing Function Level Access Control</h2></hgroup>
+    <article>
+      <p>Utvidelse av 2010-A8: Failure to Restrict URL Access</p>
+      <br><br>
+      <table class="wash">
+      <tr>
+           <th>Threat Agents</th>
+           <th>Attack Vectors</th>
+           <th>Weakness Prevalence</th>
+           <th>Weakness Detectability</th>
+           <th>Technical Impacts</th>
+           <th>Business Impacts</th>
+      </tr>
+      <tr>
+        <td>App Specific</td>
+        <td class="easy">EASY</td>
+        <td class="average">COMMON</td>
+        <td class="average">AVERAGE</td>
+        <td class="average">MODERATE</td>
+        <td>App / Business Specific</td>
+      </tr>
+      </table>    
+    </article>
+  </slide>
+
+
+ <slide>
+     <aside class="note">
+      <ul>
+        <li>Some vulnerable components (e.g., framework libraries) can be identified and exploited with automated tools, expanding the threat agent pool beyond targeted attackers to include chaotic actors.</li>
+        <li>Attacker identifies a weak component through scanning or manual analysis. He customizes the exploit as needed and executes the attack. It gets more difficult if the used component is deep in the application.</li>
+        <li>Virtually <b>every application</b> has these issues because most development teams don’t focus on ensuring their components/libraries are up to date. In many cases, the developers don’t even know all the components they are using, never mind their versions. <b>Component dependencies</b> make things even worse.</li>
+        <li>The <b>full range of weaknesses</b> is possible, including injection, broken access control, XSS, etc. The impact could range from minimal to complete host takeover and data compromise.</li>
+        <li>Consider what each vulnerability might mean for the business controlled by the affected application. It could be trivial or it could mean complete compromise.</li>
+      </ul>
+    </aside>
+    <hgroup><h2>A9 Using Components with Known Vulnerabilities</h2></hgroup>
+    <article>
+      <p>Ny i 2013, men tidligere en del av 2010-A6: Security Misconfiguration</p>
+      <br><br>
+      <table class="wash">
+      <tr>
+           <th>Threat Agents</th>
+           <th>Attack Vectors</th>
+           <th>Weakness Prevalence</th>
+           <th>Weakness Detectability</th>
+           <th>Technical Impacts</th>
+           <th>Business Impacts</th>
+      </tr>
+      <tr>
+        <td>App Specific</td>
+        <td class="average">AVERAGE</td>
+        <td class="easy">WIDESPREAD</td>
+        <td class="difficult">DIFFICULT</td>
+        <td class="average">MODERATE</td>
+        <td>App / Business Specific</td>
+      </tr>
+      </table>    
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup><h2>Hva er problemet?</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>80% koden i en applikasjon kommer fra biblioteker</li>
+        <li>Statistikk fra Sonatype:<ul>
+          <li>133 millioner downloads</li>
+          <li>29 millioner hadde kjente sårbarheter</li>
+          </ul>
+        </li>
+        <li>Jo eldre, jo verre - sårbarheter fikses i det skjulte</li>
+      </ul>
+      <footer class="source">Kilde:<span class="urlify">https://www.aspectsecurity.com/news/the-unfortunate-reality-of-insecure-libraries/</span></footer>
+      </article>
+  </slide>
+
+
+
+ <slide>
+    <hgroup><h2>Hvor er feilen?</h2></hgroup>
+    <article>
+      <div class="circlecontainer build">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </article>
+  </slide>
+
+ <slide class="nobackground" style="background: #000 url(images/book.jpg) bottom center no-repeat">
+    <hgroup><h2>Historie fra virkeligheten</h2></hgroup>
+    <article>
+      <footer class="source translucent">Image CC: <span class="urlify">https://www.flickr.com/photos/thyagohills/</span></footer>
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup><h2>OWASP Dependency Check</h2></hgroup>
+    <article class="build">
+      <span class="urlify">https://www.owasp.org/index.php/OWASP_Dependency_Check</span>
+      <ul style="margin-top: 1em">
+        <li>Command line scanner</li>
+        <li>Maven plugin</li>
+        <li>Jenkins plugin</li>
+      </ul>
+      <ul>
+        <li>Bruker http://nvd.nist.gov/ som kilde</li>
+        <li>Kildekode på <a href="https://github.com/jeremylong/DependencyCheck">GitHub</a></li>
+      </ul>
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup><h2>OWASP SafeNuget</h2></hgroup>
+    <article class="build">
+      <span class="urlify">https://www.owasp.org/index.php/OWASP_SafeNuGet</span>
+      <ul style="margin-top: 1em">
+      <ul>
+        <li>Sårbarheter i nuget-pakker</li>
+        <li>Integrasjon i Visual Studios byggeprosess</li>
+      </ul>
+      <ul>
+        <li>Bruker egen kilde basert på release notes fra pakker</li>
+        <li>Kildekode på <a href="https://github.com/OWASP/SafeNuGet">GitHub</a></li>
+      </ul>
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup><h2>Komersielle alternativer</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>Sonatype CLM<ul class="build">
+        <li>Java og .NET</li>
+        <li>Består av flere komponenter
+          <ul>
+            <li>Integrasjon i Eclipse</li>
+            <li>Integrasjon i Maven og Jenkins</li>
+            <li>Integrasjon i Nexus</li>
+          </ul>
+        </li></ul></li>
+      </ul>
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup><h2>Retire.js</h2></hgroup>
+    <article>
+      <em style="font-style: italic; margin-bottom: 2em; display:block;">What you require you must also retire</em>
+      <span class="urlify">https://github.com/bekk/retire.js</span>
+      <ul style="margin-top: 1em" class="build">
+        <li>Nytt open source-prosjekt - første release i dag!</li>
+        <li>JavaScript-biblioteker</li>
+      </ul>
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup><h2>Retire.js</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>Kilde: Manuelt vedlikeholdt fra release notes og issue trackers</li>
+      </ul>
+      <ul class="build">
+        <li>Deteksjon:
+          <ul class="build">
+            <li>Filnavn/URL <pre><code>http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js</code></pre></li>
+            <li>Kommentarer/innhold <pre><code>/*!
+ * jQuery JavaScript Library v1.5.1</code></pre></li>
+            <li>Hash av minifisert fil</li>
+            <li>Kjøring av kode<pre><code>jQuery.fn.jquery
+Handlebars.VERSION</code></pre></li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+
+ <slide>
+    <hgroup><h2>Retire.js - kommandolinje</h2></hgroup>
+    <article>
+    <pre><code>
+Usage: retire [options]
+
+Options:
+
+-h, --help       output usage information
+
+-v, --verbose    output all identified JavaScript libraries (not just vulnerable ones)
+-p, --package    limit node scan to packages where parent is mentioned in package.json (ignore node_modules folder)
+-n, --node       Run node dependency scan only
+-j, --js         Run scan of JavaScript files only (ignore node)
+
+--jspath &lt;path&gt;  Folder to scan for javascript files (node-scan always scans current folder and subfolders)
+    </code></pre>
+    </article>
+  </slide>
+
+  <slide class=" segue nobackground dark">
+    <article class="flexbox vleft auto-fadein">
+      <h2>Demo</h2>
+    </article>
+  </slide>
+ <!--slide>
+    <hgroup><h2>Retire.js - demo</h2></hgroup>
+    <article>
+      <div id="tarm"></div>
+    </article>
+  </slide -->
+
+ <slide>
+    <hgroup><h2>Retire.js - Chrome extension</h2></hgroup>
+    <article>
+      <ul>
+        <li>Scanner mens man surfer siten</li>
+        <li>Rapporterer i konsollet</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide class=" segue nobackground dark">
+    <article class="flexbox vleft auto-fadein">
+      <h2>Demo</h2>
+    </article>
+  </slide>
+
+
+  <slide class="thank-you-slide segue nobackground dark">
+    <aside class="gdbar right"><img src="images/bekk-logo.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>Spørsmål?</h2>
+      <br>
+      Slides legges på github.com/eoftedal
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/term.js"></script>
+
+
+    <script type="text/javascript">
+
+
+      window.onload = function() {
+        var socket = io.connect();
+        socket.on('connect', function() {
+          var term = new Terminal({
+            cols: 80,
+            rows: 24,
+            useStyle: true,
+            screenKeys: true
+          });
+
+          term.on('data', function(data) {
+            socket.emit('data', data);
+          });
+
+          term.on('title', function(title) {
+            document.getElementById('title').innerText = title;
+          });
+
+          term.open(document.getElementById('tarm'));
+
+          term.write('\x1b[31mWelcome to term.js!\x1b[m\r\n');
+
+          socket.on('data', function(data) {
+            term.write(data);
+          });
+
+          socket.on('disconnect', function() {
+            term.destroy();
+          });
+        });
+      };
+      $("#tarm").on('keydown', function(e) {
+        e.stopPropagation();
+      });
+      $("#tarm").on('keyup', function(e) {
+        e.stopPropagation();
+      });
+      $("#tarm").on('keypress', function(e) {
+        e.stopPropagation();
+      });
+    </script>
+
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
