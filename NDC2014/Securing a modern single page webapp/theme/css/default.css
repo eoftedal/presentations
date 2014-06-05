@@ -524,93 +524,93 @@ ul.columns li:before {
   -o-transition: all 800ms ease-in-out 100ms;
   transition: all 800ms ease-in-out 100ms;
 }
-/* line 383, ../scss/_base.scss */
+/* line 384, ../scss/_base.scss */
 .md5-1.step-0 .s-block {
   left: 100px;
   top: 100px;
 }
-/* line 384, ../scss/_base.scss */
+/* line 385, ../scss/_base.scss */
 .md5-1.step-0 .block-0 {
   left: 210px;
 }
-/* line 385, ../scss/_base.scss */
+/* line 386, ../scss/_base.scss */
 .md5-1.step-0 .block-1 {
   left: 300px;
 }
-/* line 386, ../scss/_base.scss */
+/* line 387, ../scss/_base.scss */
 .md5-1.step-0 .block-2 {
   left: 390px;
 }
-/* line 387, ../scss/_base.scss */
+/* line 388, ../scss/_base.scss */
 .md5-1.step-0 .block-2 .padding {
   margin-right: 60px;
 }
-/* line 391, ../scss/_base.scss */
+/* line 392, ../scss/_base.scss */
 .md5-1.step-1 .block-0 {
   left: 200px;
   top: 50px;
 }
-/* line 392, ../scss/_base.scss */
+/* line 393, ../scss/_base.scss */
 .md5-1.step-1 .block-1 {
   left: 300px;
   top: 50px;
 }
-/* line 393, ../scss/_base.scss */
+/* line 394, ../scss/_base.scss */
 .md5-1.step-1 .block-2 {
   left: 400px;
   top: 50px;
 }
-/* line 397, ../scss/_base.scss */
+/* line 398, ../scss/_base.scss */
 .md5-1.step-2 .block-2 .padding {
   width: 60px;
   margin-right: 0px;
 }
-/* line 401, ../scss/_base.scss */
+/* line 402, ../scss/_base.scss */
 .md5-1.step-3 .s-block {
   left: 200px;
   background: #99aa00;
 }
-/* line 402, ../scss/_base.scss */
+/* line 403, ../scss/_base.scss */
 .md5-1.step-3 .block-0 {
   top: 100px;
   opacity: 0;
 }
-/* line 405, ../scss/_base.scss */
+/* line 406, ../scss/_base.scss */
 .md5-1.step-4 .s-block {
   left: 200px;
   background: #55aa00;
 }
-/* line 406, ../scss/_base.scss */
+/* line 407, ../scss/_base.scss */
 .md5-1.step-4 .s-block {
   left: 300px;
 }
-/* line 407, ../scss/_base.scss */
+/* line 408, ../scss/_base.scss */
 .md5-1.step-4 .block-1 {
   top: 100px;
   opacity: 0;
 }
-/* line 410, ../scss/_base.scss */
+/* line 411, ../scss/_base.scss */
 .md5-1.step-5 .s-block {
   left: 200px;
   background: #00aa00;
 }
-/* line 411, ../scss/_base.scss */
+/* line 412, ../scss/_base.scss */
 .md5-1.step-5 .s-block {
   left: 400px;
 }
-/* line 412, ../scss/_base.scss */
+/* line 413, ../scss/_base.scss */
 .md5-1.step-5 .block-2 {
   top: 100px;
   opacity: 0;
 }
 
-/* line 416, ../scss/_base.scss */
+/* line 417, ../scss/_base.scss */
 .md5-2 {
   height: 160px;
   border: 1px solid #aaa;
   position: relative;
 }
-/* line 420, ../scss/_base.scss */
+/* line 421, ../scss/_base.scss */
 .md5-2 > div {
   -webkit-transition: all 800ms ease-in-out;
   -webkit-transition-delay: 100ms;
@@ -623,66 +623,66 @@ ul.columns li:before {
   height: 20px;
   box-shadow: 4px 1px 5px rgba(0, 0, 0, 0.5);
 }
-/* line 428, ../scss/_base.scss */
+/* line 429, ../scss/_base.scss */
 .md5-2 .s-block {
   background: #aaaa00;
   z-index: 100;
 }
-/* line 429, ../scss/_base.scss */
+/* line 430, ../scss/_base.scss */
 .md5-2 .block-0 {
   background: #6666ff;
 }
-/* line 430, ../scss/_base.scss */
+/* line 431, ../scss/_base.scss */
 .md5-2 .block-0 .secret {
   background: #aa00aa;
   height: 20px;
   width: 40px;
   float: left;
 }
-/* line 432, ../scss/_base.scss */
+/* line 433, ../scss/_base.scss */
 .md5-2 .block-1 {
   background: #6666ff;
 }
-/* line 433, ../scss/_base.scss */
+/* line 434, ../scss/_base.scss */
 .md5-2 .block-2 {
   background: #fff;
   box-shadow: none;
 }
-/* line 434, ../scss/_base.scss */
+/* line 435, ../scss/_base.scss */
 .md5-2 .block-2 > * {
   box-shadow: 4px 1px 5px rgba(0, 0, 0, 0.5);
 }
-/* line 435, ../scss/_base.scss */
+/* line 436, ../scss/_base.scss */
 .md5-2 .block-2 .data {
   background: #6666ff;
   height: 20px;
   width: 30px;
   float: left;
 }
-/* line 436, ../scss/_base.scss */
+/* line 437, ../scss/_base.scss */
 .md5-2 .block-2 .padding {
   background: #00aaaa;
   height: 20px;
   width: 60px;
   float: right;
 }
-/* line 438, ../scss/_base.scss */
+/* line 439, ../scss/_base.scss */
 .md5-2 .block-3 {
   background: #fff;
   box-shadow: none;
 }
-/* line 439, ../scss/_base.scss */
+/* line 440, ../scss/_base.scss */
 .md5-2 .block-3 > * {
   box-shadow: 4px 1px 5px rgba(0, 0, 0, 0.5);
 }
-/* line 440, ../scss/_base.scss */
+/* line 441, ../scss/_base.scss */
 .md5-2 .block-3 .data {
   background: #aa0000;
   height: 20px;
   width: 40px;
   float: left;
 }
-/* line 441, ../scss/_base.scss */
+/* line 442, ../scss/_base.scss */
 .md5-2 .block-3 .padding {
   background: #00aaaa;
   height: 20px;
@@ -694,93 +694,93 @@ ul.columns li:before {
   -o-transition: all 800ms ease-in-out 100ms;
   transition: all 800ms ease-in-out 100ms;
 }
-/* line 445, ../scss/_base.scss */
+/* line 446, ../scss/_base.scss */
 .md5-2.step-0 .s-block {
   left: 100px;
   top: 100px;
 }
-/* line 446, ../scss/_base.scss */
+/* line 447, ../scss/_base.scss */
 .md5-2.step-0 .block-0 {
   left: 210px;
 }
-/* line 447, ../scss/_base.scss */
+/* line 448, ../scss/_base.scss */
 .md5-2.step-0 .block-1 {
   left: 300px;
 }
-/* line 448, ../scss/_base.scss */
+/* line 449, ../scss/_base.scss */
 .md5-2.step-0 .block-2 {
   left: 390px;
 }
-/* line 449, ../scss/_base.scss */
+/* line 450, ../scss/_base.scss */
 .md5-2.step-0 .block-3 {
   left: 480px;
 }
-/* line 450, ../scss/_base.scss */
+/* line 451, ../scss/_base.scss */
 .md5-2.step-0 .block-3 .padding {
   margin-right: 50px;
 }
-/* line 454, ../scss/_base.scss */
+/* line 455, ../scss/_base.scss */
 .md5-2.step-1 .block-0 {
   left: 200px;
   top: 50px;
 }
-/* line 455, ../scss/_base.scss */
+/* line 456, ../scss/_base.scss */
 .md5-2.step-1 .block-1 {
   left: 300px;
   top: 50px;
 }
-/* line 456, ../scss/_base.scss */
+/* line 457, ../scss/_base.scss */
 .md5-2.step-1 .block-2 {
   left: 400px;
   top: 50px;
 }
-/* line 457, ../scss/_base.scss */
+/* line 458, ../scss/_base.scss */
 .md5-2.step-1 .block-3 {
   left: 500px;
   top: 50px;
 }
-/* line 461, ../scss/_base.scss */
+/* line 462, ../scss/_base.scss */
 .md5-2.step-2 .block-3 .padding {
   width: 50px;
   margin-right: 0px;
 }
-/* line 465, ../scss/_base.scss */
+/* line 466, ../scss/_base.scss */
 .md5-2.step-3 .s-block {
   left: 400px;
   background: #00aa00;
 }
-/* line 466, ../scss/_base.scss */
+/* line 467, ../scss/_base.scss */
 .md5-2.step-3 .block-0 {
   top: 100px;
   opacity: 0;
 }
-/* line 467, ../scss/_base.scss */
+/* line 468, ../scss/_base.scss */
 .md5-2.step-3 .block-1 {
   top: 100px;
   opacity: 0;
 }
-/* line 468, ../scss/_base.scss */
+/* line 469, ../scss/_base.scss */
 .md5-2.step-3 .block-2 {
   top: 100px;
   opacity: 0;
 }
-/* line 471, ../scss/_base.scss */
+/* line 472, ../scss/_base.scss */
 .md5-2.step-4 .s-block {
   left: 500px;
   background: #aa0000;
 }
-/* line 472, ../scss/_base.scss */
+/* line 473, ../scss/_base.scss */
 .md5-2.step-4 .block-3 {
   top: 100px;
   opacity: 0;
 }
 
-/* line 480, ../scss/_base.scss */
+/* line 481, ../scss/_base.scss */
 #timer {
   display: none;
 }
 
-/* line 484, ../scss/_base.scss */
+/* line 485, ../scss/_base.scss */
 .with-notes #timer {
   display: block;
   position: absolute;
@@ -952,7 +952,7 @@ slides > slide.black {
 /* line 174, ../scss/default.scss */
 slides > slide:not(.nobackground):before {
   font-size: 12pt;
-  content: "@webtonull #js #ndclondon";
+  content: "@webtonull #js #ndcoslo";
   position: absolute;
   bottom: 20px;
   left: 60px;
@@ -968,7 +968,7 @@ slides > slide:not(.nobackground):before {
 /* line 186, ../scss/default.scss */
 slides > slide:not(.nobackground):after {
   font-size: 12pt;
-  content: attr(data-slide-num) "/" attr(data-total-slides);
+  xcontent: attr(data-slide-num) "/" attr(data-total-slides);
   position: absolute;
   bottom: 20px;
   right: 60px;
@@ -2202,4 +2202,19 @@ slide.kerplunk h2 {
 /* line 1129, ../scss/default.scss */
 slide.kerplunk article {
   color: #fff;
+}
+
+/* line 1133, ../scss/default.scss */
+pre span.value {
+  color: #009f5d;
+}
+
+/* line 1137, ../scss/default.scss */
+.safe {
+  color: #080;
+}
+
+/* line 1140, ../scss/default.scss */
+.vuln {
+  color: #800;
 }
