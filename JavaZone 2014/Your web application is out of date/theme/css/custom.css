@@ -1,0 +1,255 @@
+/* line 1, ../scss/custom.scss */
+.circlecontainer {
+  margin: 0 auto;
+  position: relative;
+  width: 750px;
+  height: 200px;
+}
+
+/* line 4, ../scss/custom.scss */
+.circle {
+  border-radius: 50%;
+  border: 1px solid #000;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  opacity: 0.5;
+  top: 50px;
+  left: 350px;
+  background-color: #00f;
+  background: radial-gradient(ellipse at 30% 30%, #9999ff 0%, #0000ff 100%);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* line 17, ../scss/custom.scss */
+.circle:first-child {
+  left: 0px;
+  background-color: #ff0;
+  background: radial-gradient(ellipse at 30% 30%, #ffff99 0%, #ffff00 100%);
+}
+
+/* line 23, ../scss/custom.scss */
+.wash {
+  border-collapse: collapse;
+}
+
+/* line 27, ../scss/custom.scss */
+.wash th {
+  background: #4d953d;
+  width: 16.5%;
+  font-weight: bold !important;
+}
+
+/* line 32, ../scss/custom.scss */
+table.wash tr td {
+  font-weight: normal;
+  color: #000;
+  font-size: 0.6em;
+}
+
+/* line 37, ../scss/custom.scss */
+.wash td, .wash th {
+  text-align: center;
+  border: 3px solid #444444;
+  font-weight: normal;
+}
+
+/* line 42, ../scss/custom.scss */
+table.wash tr td, table.wash tr th {
+  font-weight: normal;
+}
+
+/* line 47, ../scss/custom.scss */
+.wash .easy {
+  background: #f00;
+}
+
+/* line 50, ../scss/custom.scss */
+.wash .easy td:first-child, .wash .easy td:last-child {
+  background: #fff;
+}
+
+/* line 53, ../scss/custom.scss */
+.wash .average {
+  background: #fb0;
+}
+
+/* line 56, ../scss/custom.scss */
+.wash .difficult {
+  background: #ff0;
+}
+
+/* line 59, ../scss/custom.scss */
+.wash .text td {
+  vertical-align: top;
+  font-weight: normal;
+}
+
+/* line 63, ../scss/custom.scss */
+.translucent {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* line 67, ../scss/custom.scss */
+.new_ {
+  font-weight: bold;
+  color: blue;
+}
+
+/* line 72, ../scss/custom.scss */
+.dark q {
+  color: #fff;
+}
+
+/* line 76, ../scss/custom.scss */
+.safe {
+  color: #080;
+}
+
+/* line 79, ../scss/custom.scss */
+.vuln {
+  color: #800;
+}
+
+@-webkit-keyframes pulsate {
+  /* line 84, ../scss/custom.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.1, 0.1);
+  }
+
+  /* line 85, ../scss/custom.scss */
+  75% {
+    -webkit-transform: scale(1.1, 1.1);
+  }
+
+  /* line 86, ../scss/custom.scss */
+  100% {
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+/* line 89, ../scss/custom.scss */
+.circle.written.build-current, .circle.libs.build-current {
+  -webkit-animation: pulsate 0.2s ease-out;
+  -webkit-animation-iteration-count: 1;
+}
+
+/* line 94, ../scss/custom.scss */
+.circle.where.build-current {
+  -webkit-animation: pulsate 0.2s ease-out;
+  -webkit-animation-iteration-count: 1;
+}
+
+/* line 100, ../scss/custom.scss */
+.circle.written {
+  height: 200px;
+  width: 200px;
+  top: 250px;
+  left: 200px;
+  z-index: 100;
+  background-color: #00f;
+  background: radial-gradient(ellipse at 30% 30%, #9999ff 0%, #0000ff 100%);
+}
+
+/* line 110, ../scss/custom.scss */
+.circle.libs {
+  top: 238px;
+  left: 188px;
+  z-index: 50;
+  background-color: #ff0;
+  background: radial-gradient(ellipse at 30% 30%, #ffff99 0%, #ffff00 100%);
+  width: 224px;
+  height: 224px;
+}
+
+/* line 120, ../scss/custom.scss */
+.circle.written:nth-child(2n) {
+  left: 650px;
+}
+
+/* line 123, ../scss/custom.scss */
+.circle.libs:nth-child(2n) {
+  left: 527px;
+  top: 127px;
+  width: 446px;
+  height: 446px;
+}
+
+/* line 129, ../scss/custom.scss */
+.circle.written:nth-child(2n), .circle.libs:nth-child(2n) {
+  xleft: 600px;
+}
+
+/* line 133, ../scss/custom.scss */
+slide:after {
+  display: none;
+}
+
+/* line 137, ../scss/custom.scss */
+.CVElist tr td {
+  font-size: 50%;
+}
+
+/* line 143, ../scss/custom.scss */
+#struts-form1 iframe {
+  display: block;
+}
+/* line 146, ../scss/custom.scss */
+#struts-form1 input[type=text] {
+  width: 88%;
+  float: left;
+}
+/* line 150, ../scss/custom.scss */
+#struts-form1 input[type=submit] {
+  width: 10%;
+  float: right;
+}
+
+/* line 157, ../scss/custom.scss */
+#struts-form2 pre {
+  width: 100%;
+  height: 250px;
+  overflow: auto;
+}
+/* line 162, ../scss/custom.scss */
+#struts-form2 pre {
+  display: block;
+}
+/* line 165, ../scss/custom.scss */
+#struts-form2 .button {
+  font-size: 130%;
+  font-weight: bolder;
+}
+/* line 169, ../scss/custom.scss */
+#struts-form2 span {
+  display: block;
+  font-family: monospace;
+  font-size: 80%;
+}
+
+/* line 176, ../scss/custom.scss */
+.aaaaah {
+  display: none;
+}
+
+/* line 180, ../scss/custom.scss */
+.aaaaah.build-current {
+  display: block;
+}
+
+/* line 184, ../scss/custom.scss */
+.winupdate {
+  position: absolute;
+  right: 200px;
+  bottom: 300px;
+  width: 644px;
+  transition: width 1s, bottom 1s, right 1s;
+}
+
+/* line 191, ../scss/custom.scss */
+.winupdate.to-build, .winupdate.build-current {
+  bottom: 0px;
+  right: 0px;
+  width: 322px;
+}

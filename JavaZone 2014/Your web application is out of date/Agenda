@@ -1,0 +1,22 @@
+Agenda
+
+Intro
+Hva er problemet?
+Er det virkelig et problem?
+	- OWASP
+*** Intermission: hvor er buggen? <- exploitability ***
+	- http client 3+4 med eksempl
+	- jQuery begge bugger -> github søk på jquery(location.hash)
+	- jQuery.photo -> exploitable bare ved å være der
+	- Struts exploit -> augh.... bilde av struts kyssing?
+Hva kan vi gjøre for å løse det?
+	- Follow web page
+	- Mailing list
+	- Mvn versions
+	- artifact listener
+	- owasp dep check
+	- retire.js
+		- retire.insecurity.today
+	- sonatype
+Slutt
+ - bilanalogi?

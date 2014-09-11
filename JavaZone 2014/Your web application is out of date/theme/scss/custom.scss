@@ -1,0 +1,200 @@
+.circlecontainer {
+  margin: 0 auto; position: relative; width: 750px; height: 200px;
+}
+.circle {
+  border-radius: 50%;
+  border: 1px solid #000;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  opacity: 0.5;
+  top: 50px; 
+  left: 350px; 
+  background-color: #00f;
+  background: radial-gradient(ellipse at 30% 30%, #99f 0%,#00f 100%);
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+}
+.circle:first-child {
+  left: 0px; 
+  background-color: #ff0;
+  background: radial-gradient(ellipse at 30% 30%, #ff9 0%, #ff0 100%);
+}
+
+.wash {
+	border-collapse: collapse;
+}
+
+.wash th {
+	background: #4d953d;
+	width: 16.5%;
+  font-weight: bold !important;
+}
+table.wash tr td {
+	font-weight: normal;
+	color: #000;
+  font-size: 0.6em;
+}
+.wash td, .wash th {
+	text-align: center;
+	border: 3px solid #444444;
+  font-weight: normal;
+}
+table.wash tr td, table.wash tr th {
+  font-weight: normal;
+}
+
+
+.wash .easy {
+	background: #f00;
+}
+.wash .easy td:first-child, .wash .easy td:last-child {
+	background: #fff;
+}
+.wash .average {
+	background: #fb0;
+}
+.wash .difficult {
+	background: #ff0;
+}
+.wash .text td {
+  vertical-align: top;
+  font-weight: normal;
+}
+.translucent {
+  background: rgba(0,0,0,0.5)
+}
+
+.new_ {
+  font-weight: bold;
+  color: #00f
+}
+
+.dark q {
+  color: #fff;
+}
+
+.safe {
+  color: #080;
+}
+.vuln {
+  color: #800;
+}
+
+@-webkit-keyframes pulsate {
+    0%   { opacity: 0; -webkit-transform: scale(0.1,0.1); }
+    75%  { -webkit-transform: scale(1.1,1.1); }
+    100% { -webkit-transform: scale(1.0,1.0);}
+}
+
+.circle.written.build-current, .circle.libs.build-current {
+    -webkit-animation: pulsate 0.2s ease-out;
+    -webkit-animation-iteration-count: 1;
+}
+
+.circle.where.build-current {
+    -webkit-animation: pulsate 0.2s ease-out;
+    -webkit-animation-iteration-count: 1;
+}
+
+
+.circle.written {
+  height: 200px;
+  width: 200px;
+  top: 250px;
+  left: 200px;
+  z-index: 100;
+  background-color: #00f;
+  background: radial-gradient(ellipse at 30% 30%, #99f 0%,#00f 100%);
+}
+
+.circle.libs {
+  top: 238px;
+  left: 188px;
+  z-index: 50;
+  background-color: #ff0;
+  background: radial-gradient(ellipse at 30% 30%, #ff9 0%, #ff0 100%);
+  width: 224px;
+  height: 224px;
+}
+
+.circle.written:nth-child(2n) {
+  left: 650px;
+}
+.circle.libs:nth-child(2n) {
+  left: 527px;
+  top: 127px;
+  width: 446px;
+  height: 446px;
+}
+.circle.written:nth-child(2n), .circle.libs:nth-child(2n) {
+  xleft: 600px;
+}
+
+slide:after {
+  display: none;
+}
+
+.CVElist tr td {
+  font-size: 50%;
+
+}
+
+#struts-form1 {
+  iframe {
+    display: block;
+  }
+  input[type=text] {
+    width: 88%;
+    float: left;
+  }
+  input[type=submit] {
+    width: 10%;  
+    float: right;
+  }
+}
+
+#struts-form2 {
+  pre {
+    width: 100%;
+    height: 250px;
+    overflow: auto;
+  }
+  pre {
+    display: block;
+  }
+  .button {
+    font-size: 130%;
+    font-weight: bolder;
+  }
+  span {
+    display: block;
+    font-family: monospace;
+    font-size: 80%;
+  }
+}
+
+.aaaaah {
+  display: none;
+}
+
+.aaaaah.build-current {
+  display: block;
+}
+
+.winupdate {
+  position: absolute;
+  right:200px; 
+  bottom: 300px;
+  width: 644px;
+  transition: width 1s, bottom 1s, right 1s;
+}
+.winupdate.to-build, .winupdate.build-current{
+  bottom:0px; 
+  right: 0px;
+  width: 322px;
+}
+
+
+
+
+

@@ -1,0 +1,808 @@
+<!--
+Google IO 2012 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your web application is out of date</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="all" href="theme/css/custom.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/bekk-logo.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+ <slide>
+    <hgroup><h2>Who am I?</h2></hgroup>
+    <article>
+      <img src="images/erlend.jpg" style="position: absolute; bottom: 2.5em; right: 1em; " />
+      <ul>
+        <li>I write code and I like to hack stuff</li>
+        <li>Head of the security competency group at <a href="http://www.bekk.no">BEKK</a></li>
+        <li><a href="https://www.owasp.org/index.php/Norway">OWASP Norway Chapter</a> lead</li>
+        <li>Member of <a href="http://www.honeynor.no/">Norwegian Honeynet Project</a></li>
+        <li>Twitter: @webtonull</a></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class=" segue nobackground dark">
+    <article class="flexbox vleft auto-fadein">
+      <q>Is your computer up to date?</q>
+    </article>
+  </slide>
+
+
+
+  <slide class=" segue nobackground dark">
+    <article class="flexbox vleft auto-fadein">
+      <q>Is your web application up to date?</q>
+    </article>
+  </slide>
+
+
+  <slide class=" segue nobackground dark">
+    <aside class="note markdown">
+      <ul>
+        <li>Heartbleed - bug in OpenSSL
+        <li>A simple bug - specify length, send less data, get memory contents 
+        <li>Do not intend to mock Robin here. Everyone can make mistake. Was reviewed.
+        <li>One cappucino please. $3, please. Here you go. Ehm... You gave me a $50, right? Yes(allthough I actully gave you a $20). Here you go sir.
+        <li>Bad example? Only vulnerable in a few versions
+      </ul>
+    </aside>
+    <article class="flexbox vleft auto-fadein">
+      <div class="build" style="z-index: 2">
+      </div>
+      <div class="build">
+        <pre style="z-index: 2; background: rgba(220, 220, 220, 0.9); margin-bottom: 0px">
+        4817504d069b4c5082161b02a22116ad75f822b1</pre>
+        <pre style="z-index: 2; background: rgba(220, 220, 220, 0.9); margin-bottom: 0px; margin-top: 0px">
+        Sat, 31 Dec 2011 22:59:57</pre>
+        <pre style="z-index: 2; background: rgba(220, 220, 220, 0.9); margin-top: 0px;">
+        PR: 2658
+        Submitted by: Robin Seggelmann &lt;seggelmann@fh-muenster.de&gt;
+        Reviewed by: steve
+
+        Support for TLS/DTLS heartbeats.</pre>
+        <div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background: #fff url('images/heartbleed.svg') top center no-repeat; background-size: contain; z-index: 1"></div>
+      </div>
+    </article>
+  </slide>
+
+  <slide class="nobackground" style="background: #fff url('images/ccsinjection.svg') top center no-repeat;">
+    <aside class="note">
+      <ul>
+        <li>Affected Versions - all
+        <li>Fixed in 0.9.8y, 1.0.0l, 1.0.1g
+        <li>eavesdrop on or falsify communications
+        <li>6 other vulnerabilities this year
+      </ul>
+    </aside>
+    <article class="flexbox vleft auto-fadein">
+    </article>
+  </slide>
+
+
+  <slide class=" segue nobackground dark">
+    <article class="flexbox vleft auto-fadein">
+      <h3>Hypothesis:</h3>
+      <q class="build">Most web sites are using the jQuery version available when the site was first built</q>
+    </article>
+  </slide>
+
+  <slide class=" segue nobackground dark">
+    <article class="flexbox vleft auto-fadein">
+      <h2>Let's ask them</h2>
+    </article>
+  </slide>
+
+ <slide>
+    <aside class="note">
+    </aside>
+    <hgroup><h2>Mass scanning domains</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>Go to http://some.domain.com</li>
+        <li>Detect any JavaScript file loaded</li>
+        <li>Check what these files contain</li>
+        <li>Automate and repeat</li>
+      </ul>
+    </article>
+  </slide>
+
+ <slide>
+    <aside class="note">
+      jQuery was first released January 2006
+    </aside>
+    <hgroup><h2>150,000 .no-domains - jQuery</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li class="safe">13,741 sites using 1.10.2</li>
+        <li class="vuln">11,497 using version 1.8.x</li>
+        <li class="vuln">15,353 using version 1.7.x</li>
+        <li class="vuln">6,387 using version 1.6.x</li>
+        <li class="vuln">2,542 using version 1.5.x</li>
+        <li class="vuln">11,209 using version 1.4.x</li>
+        <li class="vuln">596 using version 1.3.x</li>
+        <li class="vuln">2400 using version 1.2.x</li>
+        <li class="vuln">133 using version 1.1.2 (from 2007)</li>
+      </ul>
+      <footer class="source">source:<span class="urlify">http://erlend.oftedal.no/blog/?blogid=140</span></footer>
+    </article>
+  </slide>
+
+ <slide>
+    <aside class="note">
+      jQuery was first released January 2006
+    </aside>
+    <hgroup><h2>Alexa Top 100,000</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li class="vuln">Top 1,000 - 551 - 55,1% had vulnerable libraries</li>
+        <li class="vuln"v>Top 10,000 - 6,185 - 61,85% had vulnerable libraries</li>
+        <li class="vuln">Top 100,000 - 60,866 - 60,866% had vulnerable libraries</li>
+        <li>jQuery versions from 1.0.0 to 1.12.2.3</li>
+      </ul>
+      <footer class="source">source:<span class="urlify">http://erlend.oftedal.no/blog/?blogid=142</span></footer>
+
+    </article>
+  </slide>
+
+
+ <slide>
+    <aside class="note">
+    </aside>
+    <hgroup><h2>Fortune 500</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li class="vuln">385 - 77% had vulnerable libraries</li>
+        <li>jQuery versions from 1.1.3.1 to 1.10.2</li>
+      </ul>
+      <footer class="source">source:<span class="urlify">http://erlend.oftedal.no/blog/?blogid=143</span></footer>
+
+    </article>
+  </slide>
+
+  <slide class=" segue nobackground dark">
+    <article class="flexbox vleft auto-fadein">
+      <h2>What's the risk?</h2>
+    </article>
+  </slide>
+  
+ <slide>
+    <aside class="note">
+    </aside>
+    <hgroup><h2>Let's ask OWASP</h2></hgroup>
+    <article class="build">
+      <ul>
+        <li>A1 - Injection</li>
+        <li>A2 - Broken Authentication and Session Management</li>
+        <li>A3 - Cross Site Scripting (XSS)</li>
+        <li>A4 - Insecure Direct Object Reference</li>
+        <li>A5 - Security Misconfiguration</li>
+        <li>A6 - Sensitive Data Exposure</li>
+        <li>A7 - Missing Function Level Access Control</li>
+        <li>A8 - Cross Site Request Forgery (CSRF)</li>
+        <li class="new_">A9 - Using Libraries with Known Vulnerabilities</li>
+        <li>A10 - Unvalidated Redirects and Forwards</li>
+      </ul>
+    </article>
+  </slide>
+    <slide>
+     <aside class="note">
+      <ul>
+        <li>Some vulnerable components (e.g., framework libraries) can be identified and exploited with automated tools, expanding the threat agent pool beyond targeted attackers to include chaotic actors.</li>
+        <li>Attacker identifies a weak component through scanning or manual analysis. He customizes the exploit as needed and executes the attack. It gets more difficult if the used component is deep in the application.</li>
+        <li>Virtually <b>every application</b> has these issues because most development teams don’t focus on ensuring their components/libraries are up to date. In many cases, the developers don’t even know all the components they are using, never mind their versions. <b>Component dependencies</b> make things even worse.</li>
+        <li>The <b>full range of weaknesses</b> is possible, including injection, broken access control, XSS, etc. The impact could range from minimal to complete host takeover and data compromise.</li>
+        <li>Consider what each vulnerability might mean for the business controlled by the affected application. It could be trivial or it could mean complete compromise.</li>
+      </ul>
+    </aside>
+    <hgroup><h2>A9 - Using Components with Known Vulnerabilities</h2></hgroup>
+    <article>
+      <p>New in Top 10 2013, but earlier mentioned in 2010-A6: Security Misconfiguration</p>
+      <br><br>
+      <table class="wash">
+      <tr>
+           <th>Threat Agents</th>
+           <th>Attack Vectors</th>
+           <th>Weakness Prevalence</th>
+           <th>Weakness Detectability</th>
+           <th>Technical Impacts</th>
+           <th>Business Impacts</th>
+      </tr>
+      <tr>
+        <td>App Specific</td>
+        <td class="average">AVERAGE</td>
+        <td class="easy">WIDESPREAD</td>
+        <td class="difficult">DIFFICULT</td>
+        <td class="average">MODERATE</td>
+        <td>App / Business Specific</td>
+      </tr>
+      </table>    
+    </article>
+  </slide>
+
+
+ <slide>
+    <hgroup><h2>Where is the vulnerability?</h2></hgroup>
+    <article>
+      <div class="circlecontainer build">
+        <div class="circle where"></div>
+        <div class="circle where"></div>
+      </div>
+    </article>
+  </slide>
+
+ <slide>
+  <article>
+    <hgroup><h2>Writing code</h2></hgroup>
+    <div class="build" style="margin-top: 50px;">
+      <div class="written circle"></div>
+      <div class="written circle"></div>
+      <div class="libs circle"></div>
+      <div class="libs circle"></div>
+    </div>
+  </article>
+ </slide>
+  
+
+
+  <slide class=" segue nobackground dark">
+    <article class="flexbox vleft auto-fadein">
+      <h1>@gersei:</h1>
+      <q class="build">Maven is a DSL for downloading the Internet</q>
+    </article>
+  </slide>
+
+
+
+
+
+ <slide>
+    <hgroup><h2>Libraries</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>80% of code comes from libraries</li>
+        <li>Statistics from Sonatype:<ul>
+          <li>133 million downloads</li>
+          <li>29 million with known vulnerabilities</li>
+          </ul>
+        </li>
+        <li>Older usually means worse - vulnerabilities are fixed covertly</li>
+      </ul>
+      <footer class="source">Source:<span class="urlify">https://www.aspectsecurity.com/news/the-unfortunate-reality-of-insecure-libraries/</span></footer>
+      </article>
+  </slide>
+
+
+  <slide class="nobackground">
+    <aside class="note">
+
+    </aside>
+    <hgroup><h2>jQuery - Bug 9521 (fixed in 1.6.3) </h2></hgroup>
+    <article class="build">
+      <pre>$("#" + user_provided_value)</pre>
+      <pre>$(location.hash)</pre>
+      <img src="images/jquery_xss.png" style="height: 400px">
+      <footer class="source urlify">http://research.insecurelabs.org/jquery/test/</footer>
+    </article>
+  </slide>
+
+
+
+  <slide class="nobackground">
+    <hgroup><h2>HttpClient 3 - CVE-2012-5783 / Bug 613</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>Does not properly check the hostname</li>
+        <li>If you can spoof DNS...</li>
+        <li>...you can fake the certificate (Man-in-the-middle)</li>
+        <li>Fixed in 4.0 Alpha 1</li>
+      </ul>
+      <footer class="source"><span class="urlify">https://issues.apache.org/jira/browse/HTTPCLIENT-613</span></footer>
+    </article>
+  </slide>
+
+  <slide class="nobackground">
+    <hgroup><h2>HttpClient 4</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>Error in CN-parsing</li>
+        <li>If you can spoof DNS...</li>
+        <li>...you can fake the certificate (Man-in-the-middle)</li>
+        <li>Fixed in 4.3.5 - released 30th of July 2014</li>
+      </ul>
+      <footer class="source"><span class="urlify">http://seclists.org/fulldisclosure/2014/Aug/48</span></footer>
+    </article>
+  </slide>
+
+  <slide class="nobackground">
+    <hgroup><h2>jquery.prettyPhoto</h2></hgroup>
+    <article>
+      <ul>
+        <li>Vulnerable if present on page (no special use of library required)</li>
+        <li><pre>/#!%22%3E%3Cimg%20src=1%20onerror=alert%281%29;%3E/</pre></li>
+        <li>Fixed in 3.1.5</li>
+      </ul>
+      <footer class="source">Source: <span class="urlify">http://www.rafayhackingarticles.net/2013/05/kali-linux-dom-based-xss-writeup.html</span></footer>
+    </article>
+  </slide>
+
+  <slide class="nobackground">
+    <hgroup><h2>qs &lt; 1.0.0</h2></hgroup>
+    <article>
+      <ul>
+        <li>node module for parsing query strings</li>
+        <li>"Denial-of-Service Extended Event Loop Blocking"</li>
+        <li>"Denial-of-Service Memory Exhaustion"</li>
+        <li><pre>http://example.com?foo[0][100]=bar</pre></li>
+      </ul>
+      <footer class="source">Source: <span class="urlify">https://nodesecurity.io/advisories/qs_dos_memory_exhaustion</span></footer>
+    </article>
+  </slide>
+
+
+
+
+  <slide class="nobackground">
+    <hgroup><h2>Struts</h2></hgroup>
+    <article>
+      <ul>
+        <li>Several critical bugs during the last years</li>
+        <li>Popularity &rarr; more security reviews ?</li>
+      </ul>
+    </article>
+  </slide>
+
+ <slide class="nobackground" style="background: #000 url(images/book.jpg) bottom center no-repeat">
+    <aside class="note">
+      Struts ikke i bruk, feilmelding i logg osv.
+    </aside>
+    <hgroup><h2>Real story</h2></hgroup>
+    <article>
+      <footer class="source translucent">Image CC: <span class="urlify">https://www.flickr.com/photos/thyagohills/</span></footer>
+    </article>
+  </slide>
+
+
+  <slide>
+    <article>
+      <table class="CVElist">
+        <tr>
+          <td width=170px><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-0116">CVE-2014-0116</a></td>
+          <td>...allows remote attackers to "manipulate" the ClassLoader and modify session state via a crafted request.</td>
+          <td>5.8</td>
+        </tr>
+        <tr>
+          <td><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-0114">CVE-2014-0114</a></td>
+          <td>...allows remote attackers to "manipulate" the ClassLoader and execute arbitrary code...</td>
+          <td>7.5</td>
+        </tr>
+        <tr>
+          <td><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-0113">CVE-2014-0113</a></td>
+          <td>...allows remote attackers to "manipulate" the ClassLoader and execute arbitrary code via a crafted request.</td>
+          <td>7.5</td>
+        </tr>
+        <tr>
+          <td><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-0112">CVE-2014-0112</a></td>
+          <td>...allows remote attackers to "manipulate" the ClassLoader and execute arbitrary code via a crafted request...</td>
+          <td>7.5</td>
+        </tr>
+        <tr>
+          <td><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-0094">CVE-2014-0094</a></td>
+          <td>...allows remote attackers to "manipulate" the ClassLoader via the class parameter...</td>
+          <td>5.0</td>
+        </tr>
+        <tr>
+          <td><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-6348">CVE-2013-6348</a></td>
+          <td>Multiple cross-site scripting (XSS) vulnerabilities...</td>
+          <td>4.3</td>
+        </tr>
+        <tr>
+          <td><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-4316">CVE-2013-4316</a></td>
+          <td>...enables Dynamic Method Invocation by default, which has unknown impact and attack vectors.</td>
+          <td>10.0</td>
+        </tr>
+        <tr>
+          <td><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-4310">CVE-2013-4310</a></td>
+          <td>...allows remote attackers to bypass access controls...</td>
+          <td>5.8</td>
+        </tr>
+        <tr>
+          <td><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-2251">CVE-2013-2251</a></td>
+          <td>...execute arbitrary OGNL expressions...</td>
+          <td>9.3</td>
+        </tr>
+        <tr>
+          <td><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-2248">CVE-2013-2248</a></td>
+          <td>...redirect users to arbitrary web sites...</td>
+          <td>5.8</td>
+        </tr>
+        <tr>
+          <td><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-2135">CVE-2013-2135</a></td>
+          <td>... execute arbitrary OGNL code...</td>
+          <td>9.3</td>
+        </tr>
+        <tr>
+          <td><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-2134">CVE-2013-2134</a></td>
+          <td>...execute arbitrary OGNL code...</td>
+          <td>9.3</td>
+        </tr>
+        <tr>
+          <td><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-2215">CVE-2013-2215</a></td>
+          <td>...execute arbitrary OGNL code...</td>
+          <td>9.3</td>
+        </tr>
+        <tr>
+          <td><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-1966">CVE-2013-1966</a></td>
+          <td>...execute arbitrary OGNL code...</td>
+          <td>9.3</td>
+        </tr>
+        <tr>
+          <td><a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-1965">CVE-2013-1965</a></td>
+          <td>...execute arbitrary OGNL code...</td>
+          <td>9.3</td>
+        </tr>
+      </table>
+      <div class="build">
+      <img  src="images/anim-aaaaah.gif" class="aaaaah" style="position: absolute; top: 200px; left: 300px">
+      <div></div>
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <form id="struts-form1">
+        <input type="text" value="http://localhost:28081/Struts-0.0.2-SNAPSHOT/hello.action">
+        <input type="submit" value="Go">
+        <iframe></iframe>
+      </form>
+    </article>
+  </slide>
+
+
+  <slide>
+    <article>
+      <form id="struts-form2">
+        <pre class="in" contenteditable>import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.charset.StandardCharsets;
+
+Path path = Paths.get("/etc/passwd");
+byte[] bytes = Files.readAllBytes(path);
+out.print(new String(bytes, StandardCharsets.UTF_8));</pre>
+        <input type="submit" value="Inject" class="button"> <span class="logger">&nbsp;</span>
+        <pre class="result">
+        </pre>
+      </form>
+    </article>
+  </slide>
+
+
+  <slide class=" segue nobackground dark">
+    <article class="flexbox vleft auto-fadein">
+      <h2>Why aren't we upgrading?</h2>
+    </article>
+  </slide>
+
+  <slide class="nobackground" style="background: #fff url('images/motorola.jpg') center center no-repeat; background-size: 400px">
+    <aside class="note">
+      <ul>
+        <li>My first android phone
+        <li>Got updates for less than a year
+        <li>Reintroduced security bugs from vanilla android
+        <li>Last update made it useless
+      </li>
+    </aside>
+    <article class="flexbox vleft auto-fadein">
+    </article>
+  </slide>
+
+
+  <slide class="nobackground">
+    <aside class="note">
+      <ul>
+        <li>Upgrades: Cannot <ul>
+      </ul>
+    </aside>
+    <hgroup><h2>HttpClient 3</h2></hgroup>
+    <article>
+      <img src="images/paper.png" style="width: 85%; position: absolute; top: 20%; margin: 0 auto; box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.5)">
+    </article>
+  </slide>
+
+  <slide class="nobackground contain" style="background: #000 url(images/speedometer.jpg) bottom center no-repeat; background-size: contain">
+      <aside class="note">
+      <ul>
+        <li>Scenario: You need to bump a dependency from 1.0.3 to 1.0.4</li>
+        <li>How long does it take to get this fix into production?</li>
+      </ul>
+    </aside>
+    <article>
+      <footer class="source"><a href="https://www.flickr.com/photos/dharder9475/5451048578/" 
+        style="color: #fff; background: rgba(0,0,0,0.5)">www.flickr.com/photos/dharder9475/5451048578/</a></footer>
+    </article>
+  </slide>
+
+  <slide class="nobackground" style="background: #fff">
+    <article class="build">
+      <img src="images/winupdates.png" class="winupdate">
+      <div></div>
+    </article>
+  </slide>
+
+
+
+  <slide class=" segue nobackground dark">
+    <article class="flexbox vleft auto-fadein">
+      <h2>How to know when to update</h2>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>Manually reading release notes</h2></hgroup>
+    <article class="build">
+      <img src="images/yo-dawg.jpg" style="width: 600px">
+    </article>
+  </slide>
+
+    <slide>
+    <hgroup><h2>Mailing lists</h2></hgroup>
+    <article class="build">
+      <img src="images/yo-dawg2.jpg" style="width: 600px">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup><h2>Artifact listener</h2></hgroup>
+    <article>
+      <img src="images/artifact-listener.png" style="width: 100%">
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup><h2>Maven versions plugin</h2></hgroup>
+    <article class="build">
+      <pre>mvn versions:display-dependency-updates</pre>
+      <img src="images/maven-dependencies.png" style="width: 100%">
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup><h2>OWASP Dependency Check</h2></hgroup>
+    <article class="build">
+      <span class="urlify">https://www.owasp.org/index.php/OWASP_Dependency_Check</span>
+      <ul style="margin-top: 1em">
+        <li>Command line scanner</li>
+        <li>Maven plugin</li>
+        <li>Jenkins plugin</li>
+      </ul>
+      <img src="images/depchecktrend.png" style="float: right; width: 500px;">
+      <ul>
+        <li>http://nvd.nist.gov/ as source</li>
+        <li>Source code at <a href="https://github.com/jeremylong/DependencyCheck">GitHub</a></li>
+      </ul>
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup><h2>OWASP SafeNuget</h2></hgroup>
+    <article class="build">
+      <span class="urlify">https://www.owasp.org/index.php/OWASP_SafeNuGet</span>
+      <ul style="margin-top: 1em">
+      <ul>
+        <li>Vulnerabilities in NuGet packages (.NET)</li>
+        <li>Integrates into the Visual Studio build process</li>
+      </ul>
+      <ul>
+        <li>Vulnerability list maintained as a part of the project</li>
+        <li>Source code at <a href="https://github.com/OWASP/SafeNuGet">GitHub</a></li>
+      </ul>
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup><h2>Commercial alternatives</h2></hgroup>
+    <article>
+      <img src="images/sonatypeclm.png" style="float: right; width: 500px;">
+      <ul class="build">
+        <li>Sonatype CLM<ul class="build">
+        <li>Java and .NET</li>
+        <li>Several components
+          <ul>
+            <li>Integrates with Eclipse</li>
+            <li>Integrates with Maven and Jenkins</li>
+            <li>Integrates with Nexus</li>
+          </ul>
+        </li>
+      </ul></li>
+      </ul>
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup><h2>Retire.js</h2></hgroup>
+    <article>
+      <em style="font-style: italic; margin-bottom: 2em; display:block;">What you require you must also retire</em>
+      <span class="urlify">https://github.com/bekk/retire.js</span>
+      <ul style="margin-top: 1em" class="build">
+        <li>Open source project</li>
+        <li>JavaScript libraries</li>
+      </ul>
+    </article>
+  </slide>
+
+
+
+ <slide>
+    <hgroup><h2>Retire.js</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>Source: Manually maintained from reading release notes and issue trackers</li>
+      </ul>
+      <ul class="build">
+        <li>Detection:
+          <ul class="build">
+            <li>Filename/URL <pre><code>http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js</code></pre></li>
+            <li>Comments/contents <pre><code>/*!
+ * jQuery JavaScript Library v1.5.1</code></pre></li>
+            <li>Hashing minified files</li>
+            <li>Running code<pre><code>jQuery.fn.jquery
+Handlebars.VERSION</code></pre></li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+
+ <slide>
+    <hgroup><h2>Retire.js - command line</h2></hgroup>
+    <article>
+    <pre><code>Usage: retire [options]
+
+  Options:
+
+    -p, --package       limit node scan to packages where parent is mentioned in package.json (ignore node_modules)
+    -n, --node          Run node dependency scan only
+    -j, --js            Run scan of JavaScript files only
+    -v, --verbose       Show identified files (by default only vulnerable files are shown)
+    -x, --dropexternal  Don't include project provided vulnerability repository
+    -c, --nocache       Don't use local cache
+
+    --jspath &lt;path&gt;     Folder to scan for javascript files
+    --nodepath &lt;path&gt;   Folder to scan for node files
+    --path &lt;path&gt;       Folder to scan for both
+    --jsrepo &lt;path&gt;     Local version of repo
+    --noderepo &lt;path&gt;   Local version of repo
+    --proxy &lt;url&gt;       Proxy url (http://some.sever:8080)
+    --ignore &lt;paths&gt;    Comma delimited list of paths to ignore
+    </code></pre>
+    </article>
+  </slide>
+
+
+
+
+ <slide>
+    <hgroup><h2>Retire.js - Chrome/Firefox extension</h2></hgroup>
+    <article>
+        <span class="urlify">https://github.com/bekk/retire.js/tree/master/chrome</span>
+        <br><br>
+        <img src="images/retire-chrome.png" style="width: 800px; margin: 0 auto; box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);">
+    </article>
+  </slide>
+
+  <slide class="nobackground contain" style="background: #000 url(images/retire.insecurity.today.png) center center no-repeat; background-size: contain">
+     <article>
+    </article>
+  </slide>
+
+
+  <slide class="nobackground contain" style="background: #000 url(images/sonatype_components.jpg) bottom center no-repeat; background-size: contain">
+     <article>
+    </article>
+  </slide>
+
+
+
+  <slide class=" nobackground dark" style="background-color: #262626 !important; color: #e6e6e6;">
+    <hgroup><h2 style="color: #e6e6e6">BEKK Tech Radar</h2></hgroup>
+    <article class="" style="background-color: #262626">
+      <img src="images/tech-radar.png" style="float:right; width: 50%">
+      <p style="width: 45%">BEKK has published our view on the current state of technology in our Technology Radar.</p>
+<p style="width: 45%">In this radar we present what you should use, consider or refrain from grouped by "Architecture and platform", "Process and quality", "Frontend and mobile" and "Languages and frameworks"</p>
+ <p style="font-size: 80%; margin-top: 5em">
+<a href="open.bekk.no/bekk-teknologiradar-mai-2014">open.bekk.no/bekk-teknologiradar-mai-2014</a>
+<br><br>
+<a href="http://radar.bekk.no/techradar">radar.bekk.no/techradar</a>
+ </p> 
+    </article>
+  </slide>
+
+
+ <slide>
+    <hgroup><h2>Three questions you should ask yourself regularly</h2></hgroup>
+    <article>
+      <ul class="build">
+        <li>How often do we update?</li>
+        <li>How quickly can we update?</li>
+        <li>How do we know when to update?</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide class="nobackground dark">
+     <article>
+      <img src="images/anim-really-secure.gif" height="480">
+    </article>
+  </slide>
+
+  <slide class="nobackground dark">
+    <hgroup><h2 style="color: #fff; text-align: center">Remember to update</h2></hgroup>
+     <article> <div style="min-width: 400px; min-height: 400px; background: url(images/source_throne.jpg) center center no-repeat; background-size: contain"></div>
+        <h3 style="text-align: center; color: #fff">A Lannister always pays his technical debt</h3>
+    </article>
+  </slide>
+
+
+  <slide class="thank-you-slide segue nobackground dark">
+    <aside class="gdbar right"><img src="images/bekk-logo.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>Questions?</h2>
+      <br>
+      Slides at github.com/eoftedal/presentations
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<div id="timer">
+</div>
+<div id="slidecountext">
+</div>
+
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
